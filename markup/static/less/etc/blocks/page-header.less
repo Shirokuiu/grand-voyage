@@ -1,0 +1,134 @@
+.page-header__rowTop {
+  margin-bottom: 21px;
+  
+  border-bottom: 1px solid #ececec;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 24px;
+  }
+}
+
+.page-header__search {
+  display: flex;
+  width: 300px;
+  padding-bottom: 10px;
+  
+  border-bottom: 1px solid #b5b5b5;
+  label {
+    position: relative;
+    
+    margin-left: 36px;
+    
+    font-size: 24px;
+    font-weight: 300;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      top: -1px;
+      left: -31px;
+      
+      .bg-svg(@header-search);
+    }
+  }
+  input {
+    flex-grow: 1;
+    margin-left: 2px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    color: #454545;
+    
+    border: none;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: #454545;
+      font-size: 16px;
+      line-height: 18px;
+
+      opacity: 1;
+    }
+    &:-moz-input-placeholder {
+      color: #454545;
+      font-size: 16px;
+      line-height: 18px;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: #454545;
+      font-size: 16px;
+      line-height: 18px;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #454545;
+      font-size: 17px;
+      line-height: 18px;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+  }
+}
+
+.page-header__contacts-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #bf0112;
+}
+
+.page-header__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 403px;
+}
+
+.page-header__contacts-link {
+  position: relative;
+  
+  display: block;
+  &--tel {
+    margin-left: 37px;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      top: -5px;
+      left: -36px;
+      
+      .bg-svg(@tel);
+    }
+  }
+  &--order {
+    text-transform: uppercase;
+    text-decoration: underline;
+    l
+    &::before {
+      content: '';
+      
+      position: absolute;
+      top: -4px;
+      left: -36px;
+      
+      .bg-svg(@header-order);
+    }
+  }
+}
+
+.page-header__rowMiddle {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,148 @@
+.news__tabs-content {
+  display: flex;
+  flex-wrap: wrap;
+  &--reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.news__tabs-contentBlock {
+  margin-right: 32px;
+  margin-bottom: 24px;
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+  &:last-child {
+    position: relative;
+    top: -106px;
+  }
+}
+
+.news__headline {
+  .reset();
+  
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+.news__headlineText {
+  .reset();
+  
+  margin-bottom: 49px;
+  
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #454545;
+}
+
+.news__tabs-controlsWrap {
+  display: flex;
+  margin-bottom: 27px;
+}
+
+.news__tabs-controls {
+  display: block;
+  margin-right: 37px;
+  
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #454545;
+  letter-spacing: 1.5px;
+  
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.active {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #bf0112;
+    &::after {
+      content: '';
+      
+      display: block;
+      width: 75px;
+      height: 1px;
+      margin-left: 9px;
+      
+      background-color: #bf0112;
+    }
+  }
+}
+
+.news__tabs-contentBlock {
+  width: 570px;
+}
+
+.news__tabs-contentBlock-imgWrap {
+  height: 370px;
+  margin-bottom: 18px;
+  &--wide {
+    height: 570px;
+  }
+  img {
+    display: block;
+    height: 100%;
+  }
+}
+
+.news__tabs-contentBlock-title {
+  .reset();
+  
+  margin-bottom: 17px;
+  
+  font-size: 10px;
+  font-style: italic;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #454545;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.news__tabs-contentBlock-headline {
+  .reset();
+  
+  width: 435px;
+  margin: 0 auto 20px auto;
+  
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;
+}
+
+.news__tabs-contentBlock-text {
+  .reset();
+  
+  margin-bottom: 19px;
+  
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #454545;
+  text-align: center;
+}
+
+.news__tabs-contentBlock-link {
+  display: block;
+  
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #bf0112;
+  text-align: center;
+}
