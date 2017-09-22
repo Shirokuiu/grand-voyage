@@ -15,11 +15,12 @@ $(function () {
     }
   });
   
-  $(".promotion__content").not(":first").hide();
-  $(".promotion__controls").click(function() {
-      $(".promotion__controls").removeClass("active").eq($(this).index()).addClass("active");
-      $(".promotion__content").hide().eq($(this).index()).fadeIn()
-  }).eq(0).addClass("active");
+  /*
+  $(".search-avia__tabs-content").not(":first").hide();
+  $(".search-avia__tabs-controls").click(function() {
+  $(".search-avia__tabs-controls").removeClass("active").eq($(this).index()).addClass("active");
+  $(".search-avia__tabs-content").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");*/
   
   $(".news__tabs-content").not(":first").hide();
   $(".news__tabs-controls").click(function() {
