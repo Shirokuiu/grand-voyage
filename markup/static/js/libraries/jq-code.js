@@ -15,6 +15,12 @@ $(function () {
     }
   });
   
+  $(".promotion__content").not(":first").hide();
+  $(".promotion__controls").click(function() {
+      $(".promotion__controls").removeClass("active").eq($(this).index()).addClass("active");
+      $(".promotion__content").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
+  
   $(".news__tabs-content").not(":first").hide();
   $(".news__tabs-controls").click(function() {
       $(".news__tabs-controls").removeClass("active").eq($(this).index()).addClass("active");
