@@ -53,4 +53,22 @@ $(function () {
       $(".news__tabs-controls").removeClass("active").eq($(this).index()).addClass("active");
       $(".news__tabs-content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
+  
+  var ourTeamCartWorkerRateLink = $('.our-team__cart-worker-rateLink');
+  var ourTeamCartWorkerRateBlock = $('.our-team__cart-worker-rateBlock');
+  var ourTeamCartWorkerRateBlockExit = $('.our-team__cart-worker-rateBlock-exit');
+  
+  ourTeamCartWorkerRateLink.click(function (event) {
+    event.preventDefault();
+    
+    $(this).toggleClass('our-team__cart-worker-rateLink--active');
+    
+    ourTeamCartWorkerRateBlock.toggleClass('our-team__cart-worker-rateBlock--vissible');
+  });
+  
+  ourTeamCartWorkerRateBlockExit.click(function () {
+    ourTeamCartWorkerRateBlock.removeClass('our-team__cart-worker-rateBlock--vissible');
+    
+    ourTeamCartWorkerRateLink.removeClass('our-team__cart-worker-rateLink--active');
+  });
 });

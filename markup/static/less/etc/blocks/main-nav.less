@@ -17,6 +17,16 @@
     }
     .main-nav__item {
       color: #ffffff;
+      &--active {
+        color: #af0010;
+        
+        border-bottom-color: #af0010;
+        
+        cursor: default;
+        &:hover {
+          color: #af0010;
+        }
+      }
     }
   }
 }
@@ -81,6 +91,11 @@
     color: #af0010;
     
     border-bottom: 1px solid #d05964;
+    
+    cursor: default;
+    &:hover {
+      color: #af0010;
+    }
   }
   &--language-ru {
     position: relative;

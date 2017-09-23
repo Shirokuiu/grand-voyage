@@ -1,0 +1,270 @@
+.our-team {
+  padding-top: 95px;
+  padding-bottom: 99px;
+  
+  background-color: #fcfcfc;
+}
+
+.our-team__headlineWrap {
+  margin-bottom: 40px;
+  h2,
+  h3 {
+    .reset();
+    
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 6px;
+    
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 42px;
+    color: #000000;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #454545;
+  }
+}
+
+.our-team__cart-workersWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 3.24%;
+}
+
+.our-team__cart-worker {
+  width: 368px;
+  margin-bottom: 27px;
+  padding-bottom: 12px;
+  
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  &:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+
+.our-team__cart-worker-headlineWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 13px;
+  padding-left: 19px;
+  padding-right: 18px;
+  padding-bottom: 14px;
+}
+
+.our-team__cart-worker-name {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #454545;
+}
+
+.our-team__cart-worker-position {
+  display: block;
+  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #af0010;
+}
+
+.our-team__cart-worker-raiting {
+  display: flex;
+  align-items: center;
+}
+
+.our-team__cart-worker-star {
+  margin-right: 5px;
+
+  .bg-svg(@star);
+  &--no-active {
+    .bg-svg(@star-no-active);
+  }
+}
+
+.our-team__cart-worker-photoWrap {
+  position: relative;
+  img {
+    display: block;
+  }
+}
+
+.our-team__cart-worker-rateBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-right: 20px;
+  
+  background-color: rgba(255, 255, 255, 0.9);
+  &--vissible {
+    display: flex;
+  }
+  .our-team__cart-worker-star {
+    &--no-active {
+      cursor: pointer;
+    }
+  }
+}
+
+.our-team__cart-worker-rateBlock-exit {
+  .reset();
+  
+  position: relative;
+  
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  margin-bottom: 58px;
+  
+  background-color: transparent;
+  
+  border: none;
+  outline: none;
+  &::before,
+  &::after {
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    width: 22px;
+    height: 1px;
+    margin: auto;
+    
+    background-color: #bf0112;
+  }
+  &::before {
+    transform: rotateZ(45deg);
+  }
+  &::after {
+    transform: rotateZ(-45deg);
+  }
+}
+
+.our-team__cart-worker-rateBlock-text {
+  .reset();
+  
+  align-self: center;
+  margin-bottom: 14px;
+  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #454545;
+}
+
+.our-team__cart-worker-rateForm {
+  align-self: center;
+}
+
+.our-team__cart-worker-rateForm-list {
+  .reset();
+  
+  display: flex;
+  
+  list-style: none;
+}
+
+.our-team__cart-worker-rateForm-items {
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+  input {
+    display: none;
+    &:checked + label {
+      .bg-svg(@star);
+    }
+  }
+  label {
+    display: block;
+    
+    cursor: pointer;
+    
+    .bg-svg(@star-no-active);
+  }
+}
+
+.our-team__cart-worker-contactsList {
+  .reset();
+  
+  margin-bottom: 11px;
+  padding-top: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 14px;
+  
+  list-style: none;
+  
+  background-color: #fcfcfc;
+}
+
+.our-team__cart-worker-contactsItems {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  
+  font-size: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.our-team__cart-worker-contactsItem {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #454545;
+  &--contact {
+    color: #af0010;
+  }
+}
+
+.our-team__cart-worker-descriptionWrap {
+  display: flex;
+  flex-direction: column;
+  p {
+    .reset();
+    
+    margin-bottom: 12px;
+    padding-left: 21px;
+    padding-right: 16px;
+    
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #454545;
+  }
+}
+
+.our-team__cart-worker-rateLink {
+  margin-left: auto;
+    
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #d14854;
+  text-transform: uppercase;
+  &--active {
+    color: #b5b5b5;
+  }
+}
