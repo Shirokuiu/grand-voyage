@@ -1,14 +1,13 @@
 .search-avia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 506px;
+  display: block;
+  min-height: 684px;
   margin-bottom: 93px;
+  padding-top: 112px;
   
   background-image: url(%=static=%content/search-avia-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1440px 506px;
+  background-position: top center;
+  background-size: 1440px 684px;
 }
 
 .search-avia__headline {
@@ -26,6 +25,8 @@
 .search-avia__title {
   .reset();
   
+  margin-bottom: 57px;
+  
   font-size: 24px;
   line-height: 26px;
   font-weight: 300;
@@ -33,6 +34,515 @@
   text-align: center;
 }
 
+.search-avia__tabs-controlsWrap {
+  display: flex;
+}
+
+.search-avia__tabs-controls {
+  margin-right: 10px;
+  padding-top: 8px;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-bottom: 8px;
+  
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #b5b5b5;
+  
+  background-color: #ececec;
+  
+  border-bottom: 1px solid #ececec;
+  border-radius: 7px 7px 0 0;
+  
+  cursor: pointer;
+  &.active {
+    color: #bf0112;
+    
+    background-color: #fff;
+    
+    border-bottom: 1px solid transparent;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .search-avia__tabs-contentWrap {
+  position: relative;
+  
+  padding-top: 54px;
+  padding-left: 30px;
+  padding-right: 40px;
+  padding-bottom: 51px;
+  
   background-color: #FFF;
+  
+  border-radius: 0 0 7px 7px;
+}
+
+.search-avia__fromAvia-checkboxWrap {
+  position: absolute;
+  top: -35px;
+  right: 0;
+
+  display: flex;
+}
+
+.search-avia__fromAvia-checkbox {
+  margin-right: 10px;
+  padding-top: 8px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 9px;
+  
+  background-color: #fff;
+  
+  border-radius: 7px 7px 0 0;
+  &:last-child {
+    margin-right: 0;
+  }
+  input {
+    display: none;
+    &:checked + label {
+      color: #bf0112;
+      span {
+        border-color: #bf0112;
+        &::before,
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+  label {
+    position: relative;
+    
+    padding-right: 33px;
+    
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #454545;
+    
+    cursor: pointer;
+    span {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      
+      display: block;
+      width: 13px;
+      height: 13px;
+      
+      border: 1px solid #b5b5b5;
+      border-radius: 3px;
+      &::before,
+      &::after {
+        content: '';
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        display: none;
+        margin: auto;
+        
+        background-color: #bf0112;
+      }
+      &::before {  
+        left: -4px;
+        top: 1px;
+        
+        width: 3px;
+        height: 1px;
+        
+        transform: rotateZ(29deg);
+      }
+      &::after { 
+        left: 2px;
+        
+        width: 10px;
+        height: 1px;
+        
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
+
+.search-avia__fromTour-list {
+  .reset();
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  list-style: none;
+  &--formAvia {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .search-avia__fromTour-items {
+      width: 261px;
+      margin-bottom: 53px;
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n+4) {
+        margin-bottom: 0;
+      }
+      &:last-child {
+        display: flex;
+        .search-avia__fromTour-search {
+          margin-left: auto;
+        }
+      }
+      .search-avia__fromTour-itemsWrap {
+        &--dateOut,
+        &--dateTo,
+        &--passangers,
+        &--cost,
+        &--direction {
+          position: relative;
+          &::before {
+            content: '';
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        &--dateOut {
+          input {
+            cursor: pointer;
+          }
+          &::before {
+            top: -2px;
+            
+            .bg-svg(@calendarOut);
+          }
+        }
+        &--dateTo {
+          input {
+            cursor: pointer;
+          }
+          &::before {
+            top: -4px;
+            
+            .bg-svg(@calendarTo);
+          }
+        }
+        &--passangers {
+          select {
+            cursor: pointer;
+          }
+          &::before {
+            top: -8px;
+            
+            .bg-svg(@passangers);
+          }
+        }
+        &--cost {
+          select {
+            cursor: pointer;
+          }
+          &::before {
+            top: -2px;
+            
+            .bg-svg(@cost);
+          }
+        }
+        &--direction {
+          select {
+            cursor: pointer;
+          }
+          &::before {
+            top: -9px;
+            
+            .bg-svg(@direction);
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-avia__fromTour-items {
+  &:last-child {
+    margin-right: 0;
+
+    border-bottom: none;
+  } 
+}
+
+.search-avia__fromTour-itemsWrap {
+  display: flex;
+  align-items: center;
+  padding-left: 37px;
+  padding-bottom: 7px;
+  
+  border-bottom: 1px solid #d0d0d0;
+  &--focus {
+    border-color: #bf0112;
+  }
+  &--mark,
+  &--earth,
+  &--avia {
+    position: relative;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &--mark {
+    &::before {
+      top: -6px;
+      
+      .bg-svg(@form-tour-mark);
+    }
+  }
+  &--earth {
+    &::before {
+      top: -4px;
+      
+      .bg-svg(@form-tour-earth);
+    }
+  }
+  &--avia {
+    &::before {
+      top: -8px;
+      
+      .bg-svg(@form-tour-avia);
+    }
+  }
+  label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #454545;
+  }
+  input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-left: 3px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #454545;
+    line-height: 16px;
+    
+    border: none;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: #a6a6a6;
+      font-size: 14px;
+      line-height: 14px;
+      font-style: italic;
+
+      opacity: 1;
+    }
+    &:-moz-input-placeholder {
+      color: #a6a6a6;
+      font-size: 14px;
+      line-height: 14px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: #a6a6a6;
+      font-size: 14px;
+      line-height: 14px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #a6a6a6;
+      font-size: 14px;
+      line-height: 14px;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+  }
+  select {
+    flex-grow: 1;
+    margin-left: 3px;
+    
+    color: #a6a6a6;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    line-height: 14px;
+    font-style: italic;
+    
+    border: none;
+    outline: none;
+  }
+}
+
+.search-avia__fromTour-search {
+  .reset();
+  
+  min-width: 142px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+  
+  background-color: #bf0112;
+  
+  border: none;
+  border-radius: 30px;
+  outline: none;
+}
+
+.search-avia__fromAvia {
+  position: relative;
+}
+
+#ui-datepicker-div {
+  .ui-widget-header {
+    background-color: #bf0112;
+    color: #ffffff;
+    .ui-datepicker-prev {
+      span {
+        position: relative;
+
+        cursor: pointer;
+        &::before,
+        &::after {
+          content: '';
+
+          position: absolute;
+          left: 0;
+
+          width: 10px;
+          height: 2px;
+
+          background-color: #fff;
+        }
+        &::before {
+          top: 10px;
+
+          transform: rotateZ(45deg);
+        }
+        &::after {
+          top: 4px;
+
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+    .ui-datepicker-prev-hover {
+      background-color: transparent;
+
+      border-color: transparent;
+    }
+    .ui-datepicker-next {
+      span {
+        position: relative;
+
+        cursor: pointer;
+
+        transform: rotateZ(180deg);
+        &::before,
+        &::after {
+          content: '';
+
+          position: absolute;
+          left: 0;
+
+          width: 10px;
+          height: 2px;
+
+          background-color: #fff;
+        }
+        &::before {
+          top: 10px;
+
+          transform: rotateZ(45deg);
+        }
+        &::after {
+          top: 4px;
+
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+    .ui-datepicker-next-hover {
+      background-color: transparent;
+
+      border-color: transparent;
+    }
+  }
+}
+
+.search-avia__fromAvia-checkedAddOptions {
+  position: absolute;
+  left: 0;
+  bottom: -106px;
+  
+  box-sizing: border-box;
+  display: none;
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  
+  background-color: #ececec;
+  
+  border-radius: 0 0 7px 7px;
+}
+
+.search-avia__fromAvia-checkedAddOptions-list {
+  .reset();
+  
+  display: flex;
+  justify-content: space-between;
+  
+  list-style: none;
+}
+
+.search-avia__fromAvia-checkedAddOptions-items {
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 56px;
+  padding-bottom: 16px;
+  
+  background-color: #fff;
+  
+  border-radius: 7px;
+  label {
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #454545;
+  }
+}
+
+.search-avia__fromAvia-checkedAddOptions-select {
+  color: #a6a6a6;
+  font-size: 14px;
+  line-height: 14px;
+  font-style: italic;
+  
+  border: none;
+  outline: none;
+  
+  cursor: pointer;
 }

@@ -22,6 +22,25 @@ $(function () {
     $(".search-avia__tabs-content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
   
+  $('.search-avia__fromTour-itemsWrap').on( 'focusin', function () {
+    $(this).addClass('search-avia__fromTour-itemsWrap--focus');
+  });
+  $('.search-avia__fromTour-itemsWrap').on( 'focusout', function () {
+    $(this).removeClass('search-avia__fromTour-itemsWrap--focus');
+  });
+  
+  $("#fromAviaMoreOption").change(function(){
+    if ($(this).prop('checked')) {
+      $('.search-avia__fromAvia-checkedAddOptions').fadeIn(100).show();
+    } else {
+      $('.search-avia__fromAvia-checkedAddOptions').fadeOut(100); 
+    }
+  });
+  
+  $('#fromAviaDateOut, #fromAviaDateTo').datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
+  
   $(".promotion__content").not(":first").hide();
   $(".promotion__headline-block-control").click(function(event) {
     event.preventDefault();

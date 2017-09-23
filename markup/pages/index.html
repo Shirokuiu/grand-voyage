@@ -64,11 +64,151 @@
                     <span class="search-avia__tabs-controls">Авиабилеты</span>
                   </div>
                   <div class="search-avia__tabs-contentWrap">
+                   
                     <div class="search-avia__tabs-content">
-                    
+                      <form id="fromTour" class="search-avia__fromTour" action="action.php" method="post">
+                        <ul class="search-avia__fromTour-list">
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--mark">
+                              <label for="fromTourOut">Город отправления</label>
+                              <input id="fromTourOut" type="text" name="fromTourOut" placeholder="прим. Кишинев" required>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--earth">
+                              <label for="fromTourTo">Страна</label>
+                              <input id="fromTourTo" type="text" name="fromTourTo" placeholder="прим. Turkey, Antalya" required>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--avia">
+                              <label for="fromTourSelect">Тур</label>
+                              <select name="fromTourSelect" id="fromTourSelect">
+                                <option value="1">прим. Day flight</option>
+                                <option value="1">прим. Night flight</option>
+                              </select>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <button class="search-avia__fromTour-search">Поиск</button>
+                          </li>
+                        </ul>
+                      </form>
                     </div>
+                    
                     <div class="search-avia__tabs-content">
+                      <div class="search-avia__fromAvia-checkboxWrap">
+                        <div class="search-avia__fromAvia-checkbox">
+                          <input id="fromAviaHardDirection" type="checkbox" name="fromAviaHardDirection">
+                          <label for="fromAviaHardDirection">Сложный маршрут
+                            <span></span>
+                          </label> 
+                        </div>
+                        <div class="search-avia__fromAvia-checkbox">
+                          <input id="fromAviaMoreOption" type="checkbox" name="fromAviaMoreOption">
+                          <label for="fromAviaMoreOption">Еще параметры
+                            <span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <form class="search-avia__fromAvia" action="ection.php" method="post">
+                        <ul class="search-avia__fromTour-list search-avia__fromTour-list--formAvia">
+                          <li class="search-avia__fromTour-items search-avia__fromTour-itemsWrap--mark">
+                            <div class="search-avia__fromTour-itemsWrap">
+                              <label for="fromAviaOut">Откуда</label>
+                              <input id="fromAviaOut" name="fromAviaOut" type="text" placeholder="Кишинев" required>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--earth">
+                              <label for="fromAviaIn">Куда</label>
+                              <input id="fromAviaIn" name="fromAviaIn" type="text" placeholder="Амстердам" required>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--dateOut">
+                              <label for="fromAviaDateOut">Туда</label>
+                              <input id="fromAviaDateOut" type="text" name="fromAviaDateOut" placeholder="30.08.2017" required>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--dateTo">
+                              <label for="fromAviaDateTo">Обратно</label>
+                              <input id="fromAviaDateTo" type="text" name="fromAviaDateTo" placeholder="30.09.2017" required>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--passangers">
+                              <label for="fromAviaAdults">Пассажиры</label>
+                              <select id="fromAviaAdults" name="fromAviaAdults">
+                                <option value="1">1 взрослый</option>
+                                <option value="2">2 взрослых</option>
+                                <option value="3">3 взрослых</option>
+                              </select>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--cost">
+                              <label for="fromAviaCost">Класс</label>
+                              <select id="fromAviaCost" name="fromAviaCost">
+                                <option value="1">Эконом</option>
+                                <option value="2">Бизнесс</option>
+                              </select>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--direction">
+                              <label for="fromAviaRoute">Маршрут</label>
+                              <select id="fromAviaRoute" name="fromAviaRoute">
+                                <option value="1">Туда и обратно</option>
+                                <option value="2">Только туда</option>
+                              </select>
+                            </div>
+                          </li>
+                          <li class="search-avia__fromTour-items">
+                            <button class="search-avia__fromTour-search">Поиск</button>
+                          </li>
+                        </ul>
+                        
+                      </form>
                       
+                      <div class="search-avia__fromAvia-checkedAddOptions">
+                        <ul class="search-avia__fromAvia-checkedAddOptions-list">
+                          <li class="search-avia__fromAvia-checkedAddOptions-items">
+                            <label for="fromAviaPayment">Цена билетов</label> 
+                            <select id="fromAviaPayment" class="search-avia__fromAvia-checkedAddOptions-select" name="fromAviaPayment">
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="1">до 1500$</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="2">до 1000$</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="3">до 500$</option>
+                            </select>
+                          </li>
+                          <li class="search-avia__fromAvia-checkedAddOptions-items">
+                            <label for="fromAviaCompany">Компания</label>
+                            <select id="fromAviaCompany" class="search-avia__fromAvia-checkedAddOptions-select" name="fromAviaCompany">
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="1">Fly Dubai</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="2">Air Moldova</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="3">Utair</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="4">Quatar</option>
+                            </select>
+                          </li>
+                          <li class="search-avia__fromAvia-checkedAddOptions-items">
+                            <label for="fromAviaTime">Время в пути</label>
+                            <select id="fromAviaTime" class="search-avia__fromAvia-checkedAddOptions-select" name="fromAviaTime">
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="1">Не важно</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="2">30 мин</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="3">1 час</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="4">3 часа</option>
+                            </select>
+                          </li>
+                          <li class="search-avia__fromAvia-checkedAddOptions-items">
+                            <label for="fromAviaTransfer">Пересадки</label>
+                            <select id="fromAviaTransfer" class="search-avia__fromAvia-checkedAddOptions-select" name="fromAviaTransfer">
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="1">Без пересадок</option>
+                              <option class="search-avia__fromAvia-checkedAddOptions-option" value="2">С пересадкой</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -759,7 +899,7 @@
                         <img src="%=static=%img/content/footer-latestNews-img.jpg" alt="Картинка">
                       </div>
                       <div class="page-footer__latestNews-descriptionWrap">
-                        <h2>Бали - Рай на земле</h2>
+                        <a href="#">Бали - Рай на земле</a>
                         <p>Датой основания Стамбула считается 659 год до н.э. Именно в это…</p>
                         <span>12.06.2017</span>
                       </div>
@@ -769,7 +909,7 @@
                         <img src="%=static=%img/content/footer-latestNews-img2.jpg" alt="Картинка">
                       </div>
                       <div class="page-footer__latestNews-descriptionWrap">
-                        <h2>Горнолыжный драйв</h2>
+                        <a href="#">Горнолыжный драйв</a>
                         <p>Датой основания Стамбула считается 659 год до н.э. Именно в это…</p>
                         <span>12.06.2017</span>
                       </div>
@@ -779,7 +919,7 @@
                         <img src="%=static=%img/content/footer-latestNews-img3.jpg" alt="Картинка">
                       </div>
                       <div class="page-footer__latestNews-descriptionWrap">
-                        <h2>Новые билеты во все направления</h2>
+                        <a href="#">Новые билеты во все направления</a>
                         <p>Датой основания Стамбула считается 659 год до н.э. Именно в это…</p>
                         <span>12.06.2017</span>
                       </div>
