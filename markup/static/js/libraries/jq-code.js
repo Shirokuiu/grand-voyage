@@ -61,13 +61,13 @@ $(function () {
   ourTeamCartWorkerRateLink.click(function (event) {
     event.preventDefault();
     
-    $(this).toggleClass('our-team__cart-worker-rateLink--active');
+    $(this).parents('.our-team__cart-worker').find(ourTeamCartWorkerRateBlock).toggleClass('our-team__cart-worker-rateBlock--vissible')
     
-    ourTeamCartWorkerRateBlock.toggleClass('our-team__cart-worker-rateBlock--vissible');
+    $(this).toggleClass('our-team__cart-worker-rateLink--active')
   });
   
   ourTeamCartWorkerRateBlockExit.click(function () {
-    ourTeamCartWorkerRateBlock.removeClass('our-team__cart-worker-rateBlock--vissible');
+    $(this).parent().removeClass('our-team__cart-worker-rateBlock--vissible');
     
     ourTeamCartWorkerRateLink.removeClass('our-team__cart-worker-rateLink--active');
   });
