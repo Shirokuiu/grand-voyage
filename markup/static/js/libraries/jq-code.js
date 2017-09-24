@@ -69,6 +69,6 @@ $(function () {
   ourTeamCartWorkerRateBlockExit.click(function () {
     $(this).parent().removeClass('our-team__cart-worker-rateBlock--vissible');
     
-    ourTeamCartWorkerRateLink.removeClass('our-team__cart-worker-rateLink--active');
+    $(this).parents('.our-team__cart-worker').find(ourTeamCartWorkerRateLink).removeClass('our-team__cart-worker-rateLink--active');
   });
 });
