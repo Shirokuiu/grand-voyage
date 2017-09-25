@@ -1,0 +1,121 @@
+.tour__galery-img {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.tour__galery-img-descriptionWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tour__galery-img-headline {
+  .reset();
+  
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.tour__galery-img-titleDateIn {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 38px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.tour__galery-img-titleDateTo {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 38px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.tour__galery-img-titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tour__galery-img-price {
+  line-height: 38px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tour__galery-img-titledescription {
+  .reset();
+  
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.tour__galery {
+  .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus) {
+    transform: translate3d(-77px, 0, 0);
+  }
+  .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus) {
+    transform: translate3d(77px, 0, 0);
+  }
+  &.fotorama {
+    .fotorama__arr {
+      
+      width: 40px;
+      height: 40px;
+      
+      background-color: #454545;
+      
+      opacity: 0.84;
+      &--prev,
+      &--next {
+        &::before,
+        &::after {
+          content: '';
+          
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          
+          margin: auto;
+          width: 6px;
+          height: 1px;
+          
+          background-color: #fff;
+        }
+        &::before {
+          top: 3px;
+          
+          transform: rotateZ(45deg);
+        }
+        &::after {
+          top: -5px;
+          
+          transform: rotateZ(-45deg);
+        }
+      }
+      &--prev {
+        left: 30px;
+      }
+      &--next {
+        right: 30px;
+        &::before {
+          top: -3px;
+        }
+        &::after {
+          top: 5px;
+        }
+      }
+    }
+  }
+}
