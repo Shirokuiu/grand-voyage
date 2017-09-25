@@ -1,7 +1,8 @@
 $(function () {
-  $('#sliderPromotion, #sliderPromotion2').owlCarousel({
+  $('.slider-promotion').owlCarousel({
     margin:20,
     smartSpeed: 1000,
+    nav: true,
     responsive:{
         0:{
             items:1

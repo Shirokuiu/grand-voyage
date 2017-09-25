@@ -6,7 +6,7 @@
   <body class="page">
     %=symbols=%
     <div class="page__wrapper">
-      <header class="page-header">
+      <header class="page-header page-header--countries">
        
         <div class="page-header__rowTop">
           <div class="container">
@@ -64,6 +64,39 @@
              <h3 class="countries__subtitle">Эксклюзивные предложения, отдых вашей мечты!</h3>
            </div>
            
+           <div class="country-nav">
+              <h2 class="country-nav__headline">Сортировать по:</h2>
+              <ul class="country-nav__list">
+                <li class="country-nav__items country-nav__items--popular">
+                  <input id="cityNavPopular" type="checkbox" name="cityNavPopular">
+                  <label for="cityNavPopular">Популярности
+                    <span></span>
+                  </label>
+                  <div class="country-nav__itemBorder"></div>
+                </li> 
+                <li class="country-nav__items country-nav__items--direction">
+                  <input id="cityNavNew" type="checkbox" name="cityNavNew">
+                  <label for="cityNavNew">Новые направления
+                    <span></span>
+                  </label>
+                  <div class="country-nav__itemBorder"></div>
+                </li>
+                <li class="country-nav__items country-nav__items--trends">
+                  <input id="cityNavTrends" type="checkbox" name="cityNavTrends">
+                  <label for="cityNavTrends">Тренды сезона
+                    <span></span>
+                  </label>
+                  <div class="country-nav__itemBorder"></div>
+                </li>
+                <li class="country-nav__items">
+                  <select name="cityNavSelect" id="cityNavSelect">
+                   <option value="1">Выберите страну</option>
+                  </select>
+                  <div class="country-nav__itemBorder"></div>
+                </li>
+              </ul>
+            </div>
+           
            <div class="countries__wrapCarts">
              <div class="countries__cart">
                <div class="countries__wrapImg">
@@ -93,7 +126,7 @@
                          <span>Азия</span>
                      </li>
                    </ul>
-                   <a class="countries__excerpt" href="#">подробнее</a>
+                   <a class="countries__excerpt" href="one-country.html">подробнее</a>
                </div>
              </div>
            </div>
