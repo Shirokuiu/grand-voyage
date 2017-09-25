@@ -11,7 +11,9 @@
         <div class="page-header__rowTop">
           <div class="container">
             <div class="logo">
-              <img src="%=static=%img/content/logo.png" alt="Гранд Вояж">
+              <a href="index.html">
+                <img src="%=static=%img/content/logo.png" alt="Гранд Вояж">
+              </a>
             </div>
             <div class="page-header__search">
               <label for="search">Поиск</label>
@@ -34,13 +36,14 @@
                 <li class="main-nav__items"><a href="#" class="main-nav__item">Авиабилеты</a></li>
                 <li class="main-nav__items"><a href="#" class="main-nav__item">Круизы</a></li>
                 <li class="main-nav__items"><a href="#" class="main-nav__item">Новости</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Контакты</a></li>
+                <li class="main-nav__items"><a href="contacts.html" class="main-nav__item">Контакты</a></li>
                 <li class="main-nav__items"><a href="#" class="main-nav__item">Отзывы</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--language-ru">
-                  Ru</a>
+                <li class="main-nav__items main-nav__items--language">
+                  <select class="main-nav__item-language" name="mainNavItemLanguage" id="mainNavItemLanguage">
+                    <option value="1">Ru</option>
+                    <option value="2">Ro</option>
+                  </select>
                   <span></span>
-                  <a href="#" class="main-nav__item main-nav__item--language-ro">
-                  Ro</a>
                 </li>
               </ul>
             </nav>
