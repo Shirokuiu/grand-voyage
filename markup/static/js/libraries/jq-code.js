@@ -16,6 +16,24 @@ $(function () {
     }
   });
   
+  $('.tour__galery').owlCarousel({
+    loop: true,
+    margin: 0,
+    smartSpeed: 1,
+    nav: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1160:{
+            items:1
+        }
+    }
+  });
+  
   
   $(".search-avia__tabs-content").not(":first").hide();
   $(".search-avia__tabs-controls").click(function() {
