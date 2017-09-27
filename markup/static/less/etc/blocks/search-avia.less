@@ -1,8 +1,10 @@
 .search-avia {
+  box-sizing: border-box;
   display: block;
   min-height: 684px;
   margin-bottom: 93px;
   padding-top: 112px;
+  padding-bottom: 128px;
   
   background-image: url(%=static=%content/search-avia-bg.jpg);
   background-repeat: no-repeat;
@@ -179,30 +181,79 @@
 .search-avia__fromTour-list {
   .reset();
   
+  position: relative;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   
   list-style: none;
   &--formAvia {
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: block;
     .search-avia__fromTour-items {
-      width: 261px;
-      margin-bottom: 53px;
-      &:nth-child(4) {
-        margin-right: 0;
+      display: flex;
+      &--add {
+        display: none;
+        width: auto;
+        margin-left: auto;
+        margin-right: 35px;
       }
-      &:nth-last-child(-n+4) {
-        margin-bottom: 0;
+      &--addItem {
+        margin-bottom: 37px;
       }
-      &:last-child {
-        display: flex;
-        .search-avia__fromTour-search {
-          margin-left: auto;
-        }
+      &--button {
+        width: auto;
+        margin-left: auto;
+      }
+      &--button-margin {
+        margin-left: 0;
+      }
+      &--margin {
+        margin-bottom: 53px !important;
+      }
+      &--rowTop {
+        margin-bottom: 53px !important;
+      }
+      &--rowBottom {
+        align-items: center;
       }
       .search-avia__fromTour-itemsWrap {
+        box-sizing: border-box;
+        width: 247px;
+        margin-right: 50px;
+        &--delete {
+          position: relative;
+          
+          margin-right: 0;
+
+          border-color: #bf0112;
+
+          cursor: pointer;
+          &::before,
+          &::after {
+            content: '';
+
+            position: absolute;
+            top: 11px;
+            right: 0;
+
+            width: 14px;
+            height: 1px;
+
+            background-color: #bf0112;
+          }
+          &::before {
+            transform: rotateZ(45deg);
+          }
+          &::after {
+            transform: rotateZ(-45deg);
+          }
+        }
+        &--difficultCheckbox {
+          position: absolute !important;
+          top: 3px !important;
+          right: -42px !important;
+        }
         &--dateOut,
         &--dateTo,
         &--passangers,
@@ -228,6 +279,7 @@
           }
         }
         &--dateTo {
+          margin-right: 0;
           input {
             cursor: pointer;
           }
@@ -238,6 +290,7 @@
           }
         }
         &--passangers {
+          height: 26px;
           select {
             cursor: pointer;
           }
@@ -248,6 +301,7 @@
           }
         }
         &--cost {
+          height: 29px;
           select {
             cursor: pointer;
           }
@@ -258,6 +312,7 @@
           }
         }
         &--direction {
+          height: 29px;
           select {
             cursor: pointer;
           }
@@ -390,6 +445,24 @@
     border: none;
     outline: none;
   }
+}
+
+.search-avia__fromTour-itemsWrap-delete {
+  .reset();
+  
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #454545;
+}
+
+.search-avia__fromTour-items-link {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #bf0112;
 }
 
 .search-avia__fromTour-search {

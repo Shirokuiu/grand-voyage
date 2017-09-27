@@ -7,6 +7,8 @@
 }
 
 .link1-offer__aviaDetails-blockWrap {
+  margin-bottom: 50px;
+  
   background-color: #ffffff;
   
   border-radius: 6px 0 0 6px;
@@ -22,18 +24,48 @@
   padding-bottom: 26px;
   
   list-style: none;
+  
+  border-bottom: 1px solid #ececec;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .link1-offer__aviaDetails-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &--rowTop {
+    margin-bottom: 20px;
+  }
+  &--rowCenter {
+    margin-bottom: 16px;
+  }
 }
 
 .link1-offer__aviaDetails-item {
   display: flex;
   &--text {
+    position: relative;
+    left: 23px;
+    
     display: block;
+  }
+  &--rowBottom {
+    display: block;
+    .link1-offer__aviaDetails-item-text {
+      text-align: left;
+    }
+  }
+  &--center {
+    .link1-offer__aviaDetails-item-text {
+      text-align: center;
+    }
+  }
+  &--right {
+    .link1-offer__aviaDetails-item-text {
+      text-align: right;
+    }
   }
 }
 
@@ -63,13 +95,28 @@
   &--icon1 {
     position: relative;
     &::before {
-      .bg-svg(@link-avia-icon1)
+      .bg-svg(@link-avia-icon1);
     }
   }
   &--icon2 {
     position: relative;
     &::before {
-      .bg-svg(@link-avia-icon2)
+      .bg-svg(@link-avia-icon2);
+    }
+  }
+  &--icon4 {
+    position: relative;
+    
+    border: none;
+    &::before {
+      top: 0;
+      left: 0;
+      right: auto;
+      bottom: auto;
+      
+      margin: 0;
+      
+      .bg-svg(@link-avia-icon3);
     }
   }
 }
@@ -85,6 +132,18 @@
   &--italic {
     color: #a6a6a6;
     font-weight: 300;
+  }
+  &--rowBottom {
+    color: #353535;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  &--rowBottom-italic {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #b5b5b5;
   }
 }
 

@@ -56,6 +56,30 @@ $(function () {
     }
   });
   
+  $("#fromAviaHardDirection").change(function(){
+    if ($(this).prop('checked')) {
+      $('.search-avia__fromTour-items--button').addClass('search-avia__fromTour-items--button-margin');
+      $('.search-avia__fromTour-items--add').show();
+      $('.search-avia__fromTour-items--hiddenCheckbox').hide();
+      $('.search-avia__fromTour-itemsWrap--passangers').addClass('search-avia__fromTour-itemsWrap--difficultCheckbox');
+    } else {
+      $('.search-avia__fromTour-items--add').hide();
+      $('.search-avia__fromTour-items--hiddenCheckbox').show();
+      $('.search-avia__fromTour-itemsWrap--passangers').removeClass('search-avia__fromTour-itemsWrap--difficultCheckbox');
+      $('.search-avia__fromTour-items--button').removeClass('search-avia__fromTour-items--button-margin');
+    }
+  });
+  
+  $('.search-avia__fromTour-list').delegate('.search-avia__fromTour-items-link', 'click', function (event) {
+    event.preventDefault();
+    
+    $('<li class="search-avia__fromTour-items search-avia__fromTour-items--addItem"><div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--mark"><label for="fromAviaOut">Откуда</label><input id="fromAviaOut" name="fromAviaOut" type="text" placeholder="Кишинев" required></div><div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--earth"><label for="fromAviaIn">Куда</label><input id="fromAviaIn" name="fromAviaIn" type="text" placeholder="Амстердам" required></div><div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--dateOut"><label for="fromAviaDateOut">Когда</label><input id="fromAviaDateOut" type="text" name="fromAviaDateOut" placeholder="30.08.2017" required></div><div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--delete"><p class="search-avia__fromTour-itemsWrap-delete">Удалить</p></div></li>').insertBefore('.search-avia__fromTour-items--rowBottom');
+  });
+  
+  $('.search-avia__fromTour-list').delegate('.search-avia__fromTour-itemsWrap--delete', 'click', function () {
+    $(this).parent().remove();
+  });
+  
   $('#fromAviaDateOut, #fromAviaDateTo').datepicker({
     dateFormat: 'dd.mm.yy'
   });

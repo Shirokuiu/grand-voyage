@@ -94,6 +94,7 @@
                             <button class="search-avia__fromTour-search">Поиск</button>
                           </li>
                         </ul>
+                        
                       </form>
                       <form class="search-avia__fromTour-moreOption" action="action.php">
                         <ul class="search-avia__fromTour-moreOption-list">
@@ -151,31 +152,31 @@
                       </div>
                       <form class="search-avia__fromAvia" action="ection.php" method="post">
                         <ul class="search-avia__fromTour-list search-avia__fromTour-list--formAvia">
-                          <li class="search-avia__fromTour-items search-avia__fromTour-itemsWrap--mark">
-                            <div class="search-avia__fromTour-itemsWrap">
+                          <li class="search-avia__fromTour-items search-avia__fromTour-items--rowTop">
+                           
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--mark">
                               <label for="fromAviaOut">Откуда</label>
                               <input id="fromAviaOut" name="fromAviaOut" type="text" placeholder="Кишинев" required>
                             </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
+                            
                             <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--earth">
                               <label for="fromAviaIn">Куда</label>
                               <input id="fromAviaIn" name="fromAviaIn" type="text" placeholder="Амстердам" required>
                             </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
+                            
                             <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--dateOut">
                               <label for="fromAviaDateOut">Туда</label>
                               <input id="fromAviaDateOut" type="text" name="fromAviaDateOut" placeholder="30.08.2017" required>
                             </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
-                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--dateTo">
+                            
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--dateTo search-avia__fromTour-items--hiddenCheckbox">
                               <label for="fromAviaDateTo">Обратно</label>
                               <input id="fromAviaDateTo" type="text" name="fromAviaDateTo" placeholder="30.09.2017" required>
                             </div>
+                            
                           </li>
-                          <li class="search-avia__fromTour-items">
+                          <li class="search-avia__fromTour-items search-avia__fromTour-items--rowBottom">
+                            
                             <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--passangers">
                               <label for="fromAviaAdults">Пассажиры</label>
                               <select id="fromAviaAdults" name="fromAviaAdults">
@@ -184,8 +185,7 @@
                                 <option value="3">3 взрослых</option>
                               </select>
                             </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
+                            
                             <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--cost">
                               <label for="fromAviaCost">Класс</label>
                               <select id="fromAviaCost" name="fromAviaCost">
@@ -193,21 +193,21 @@
                                 <option value="2">Бизнесс</option>
                               </select>
                             </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
-                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--direction">
+                            
+                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--direction search-avia__fromTour-items--hiddenCheckbox">
                               <label for="fromAviaRoute">Маршрут</label>
                               <select id="fromAviaRoute" name="fromAviaRoute">
                                 <option value="1">Туда и обратно</option>
                                 <option value="2">Только туда</option>
                               </select>
                             </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
-                            <button class="search-avia__fromTour-search">Поиск</button>
+                            
+                            <a href="#" class="search-avia__fromTour-items-link search-avia__fromTour-items--add">Добавить перелет</a>
+                            
+                            <button class="search-avia__fromTour-search search-avia__fromTour-items--button">Поиск</button>
+                            
                           </li>
                         </ul>
-                        
                       </form>
                       
                       <div class="search-avia__fromAvia-checkedAddOptions">
