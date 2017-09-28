@@ -124,15 +124,186 @@
                               <option value="2">от 500 до 1000</option>
                             </select>
                           </li>
-                          <li class="search-avia__fromTour-moreOption-items">
-                            <label for="search-avia__fromTourCheckboxIs">Есть места на рейсы</label>
+                          <li class="search-avia__fromTour-moreOption-items search-avia__fromTour-moreOption-items--is">
                             <input id="search-avia__fromTourCheckboxIs" type="checkbox" name="search-avia__fromTourCheckboxIs">
+                            <label for="search-avia__fromTourCheckboxIs">Есть места на рейсы
+                              <span></span>
+                            </label>
                           </li>
-                          <li class="search-avia__fromTour-moreOption-items">
-                            <label for="search-avia__fromTourCheckboxNot">Нет остановки продажи</label>
+                          <li class="search-avia__fromTour-moreOption-items search-avia__fromTour-moreOption-items--not">
                             <input id="search-avia__fromTourCheckboxNot" type="checkbox" name="search-avia__fromTourCheckboxIs">
+                            <label for="search-avia__fromTourCheckboxNot">Нет остановки продажи
+                              <span></span>
+                            </label>
                           </li>
                         </ul>
+                        <div class="search-avia__fromTour-moreOption-rowBottom">
+                         
+                          <div class="search-avia__fromTour-moreOption-rowBottom-block">
+                            <div class="search-avia__fromTour-moreOption-rowBottom-blockHeadline">
+                              <h2 class="search-avia__fromTour-moreOption-rowBottom-headline">Город</h2>
+                              <button class="search-avia__fromTour-moreOption-rowBottom-random" type="button">любой</button>
+                            </div>
+                            <ul class="search-avia__fromTour-moreOption-rowBottom-list">
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="alania" type="checkbox">
+                                <label for="alania">Алания
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="antalia" type="checkbox">
+                                <label for="antalia">Анталия
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="kemer" type="checkbox">
+                                <label for="kemer">Кемер
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="side" type="checkbox">
+                                <label for="side">Сиде
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="anapa" type="checkbox">
+                                <label for="anapa">Анапа
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="maldivi" type="checkbox">
+                                <label for="maldivi">Мальдивы
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="cyprus" type="checkbox">
+                                <label for="cyprus">Кипр
+                                  <span></span>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <div class="search-avia__fromTour-moreOption-rowBottom-block">
+                             <div class="search-avia__fromTour-moreOption-rowBottom-blockHeadline">
+                              <h2 class="search-avia__fromTour-moreOption-rowBottom-headline">Питание</h2>
+                              <button class="search-avia__fromTour-moreOption-rowBottom-random" type="button">любое</button>
+                            </div>
+                            <ul class="search-avia__fromTour-moreOption-rowBottom-list">
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="category5" type="checkbox">
+                                <label for="category5">5*
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="category4" type="checkbox">
+                                <label for="category4">4*
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="category3" type="checkbox">
+                                <label for="category3">3*
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="categoryFamily" type="checkbox">
+                                <label for="categoryFamily">Family
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="category2" type="checkbox">
+                                <label for="category2">2*
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="category1" type="checkbox">
+                                <label for="category1">1*
+                                  <span></span>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <div class="search-avia__fromTour-moreOption-rowBottom-block search-avia__fromTour-moreOption-rowBottom-block--hotels">
+                            <div class="search-avia__fromTour-moreOption-rowBottom-blockHeadline">
+                              <h2 class="search-avia__fromTour-moreOption-rowBottom-headline">Питание</h2>
+                              <button class="search-avia__fromTour-moreOption-rowBottom-random" type="button">любое</button>
+                            </div>
+                            <div class="search-avia__fromTour-moreOption-rowBottom-blockSearch">
+                              <input id="searchHotels" type="text" name="searchHotels" placeholder="поиск">
+                            </div>
+                            <ul class="search-avia__fromTour-moreOption-rowBottom-list search-avia__fromTour-moreOption-rowBottom-list--hotels">
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="hotel1" type="checkbox">
+                                <label for="hotel1">ADALYA ARTSIDE HOTEL 5*
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="hotel2" type="checkbox">
+                                <label for="hotel2">ADALYA ELITE LARA 5*
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="hotel3" type="checkbox">
+                                <label for="hotel3">ADAM EVE 5*
+                                  <span></span>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="search-avia__fromTour-moreOption-rowBottom-block">
+                            <div class="search-avia__fromTour-moreOption-rowBottom-blockHeadline">
+                              <h2 class="search-avia__fromTour-moreOption-rowBottom-headline">Категория</h2>
+                              <button class="search-avia__fromTour-moreOption-rowBottom-random" type="button">любая</button>
+                            </div>
+                            <ul class="search-avia__fromTour-moreOption-rowBottom-list">
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="foodUai" type="checkbox">
+                                <label for="foodUai">Uai
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="foodAi" type="checkbox">
+                                <label for="foodAi">Ai
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="foodBb" type="checkbox">
+                                <label for="foodBb">Bb
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="foodHb" type="checkbox">
+                                <label for="foodHb">Hb
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li class="search-avia__fromTour-moreOption-rowBottom-items">
+                                <input id="foodRо" type="checkbox">
+                                <label for="foodRо">Rо
+                                  <span></span>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                        </div>
                       </form>
                     </div>
                     
