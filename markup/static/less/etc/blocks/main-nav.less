@@ -167,3 +167,32 @@
     text-transform: uppercase;
   }
 }
+
+@media (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+  }
+  
+  .main-nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .main-nav__items {
+    width: 100%;
+    margin-right: 0;
+    &::before {
+      display: none;
+    }
+    &--language {
+      position: absolute;
+      top: 37;
+      right: 2.473958333333333%;
+      
+      width: 43px;
+      &::before {
+        display: block;
+      }
+    }
+  }
+}

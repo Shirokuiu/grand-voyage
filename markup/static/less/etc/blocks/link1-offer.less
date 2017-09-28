@@ -51,6 +51,9 @@
     
     display: block;
   }
+  &--textCenter {
+    left: 47px;
+  }
   &--rowBottom {
     display: block;
     .link1-offer__aviaDetails-item-text {
@@ -174,5 +177,48 @@
   font-size: 30px;
   font-weight: 400;
   line-height: 32px;
+  color: #454545;
+}
+
+.link1-offer__bg {
+  margin-bottom: 96px;
+  img {
+    display: block;
+  }
+  &--fix-height {
+    margin-bottom: 0;
+    img {
+      height: 200px;
+    }
+  }
+}
+
+.link1-offer__bg-description {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 11px;
+  padding-bottom: 16px;
+}
+
+.link1-offer__bg-description-headline {
+  .reset();
+  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #454545;
+  a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #af0010;
+    text-decoration: none;
+  }
+}
+
+.link1-offer__bg-description-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
   color: #454545;
 }

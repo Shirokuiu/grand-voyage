@@ -17,3 +17,26 @@
     color: #af0010;
   }
 }
+
+@media (max-width: 768px) {
+  .user-block {
+    position: absolute;
+    top: 37px;
+    left: 2.473958333333333%;
+    
+    flex-direction: column;
+    align-items: baseline;
+    width: 85%;
+  }
+  
+  .user-block__link {
+    width: 100%;
+    margin-right: 0;
+    &--reg {
+      order: 1;
+    }
+    &--enter {
+      margin-bottom: 32px;
+    }
+  }
+}

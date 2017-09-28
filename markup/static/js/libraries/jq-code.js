@@ -10,7 +10,7 @@ $(function () {
         600:{
             items:1
         },
-        1160:{
+        1210:{
             items:3
         }
     }
@@ -34,6 +34,12 @@ $(function () {
     }
   });
   
+  $('.page-header__rowTop-button').click(function () {
+    $(this).toggleClass('page-header__rowTop-button--open');
+    
+    $('.page-header__contacts-link--tel').toggleClass('page-header__contacts-link--telVissible');
+    $('.page-header__rowMiddle').toggleClass('page-header__rowMiddle--open');
+  });
   
   $(".search-avia__tabs-content").not(":first").hide();
   $(".search-avia__tabs-controls").click(function() {
