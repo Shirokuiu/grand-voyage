@@ -1,17 +1,18 @@
 $(function () {
   $('.slider-promotion').owlCarousel({
-    margin:20,
     smartSpeed: 1000,
     nav: true,
     responsive:{
         0:{
             items:1
         },
-        600:{
-            items:1
+        768:{
+            items:1,
+            margin:0
         },
         1210:{
-            items:3
+            items:3,
+            margin: 20
         }
     }
   });

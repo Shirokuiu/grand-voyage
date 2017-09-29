@@ -1,5 +1,8 @@
 .best-deals {
   margin-bottom: 100px;
+  padding-top: 87px;
+  
+  background-color: #FCFCFC;
 }
 
 .best-deals__blocksWrap {
@@ -78,4 +81,40 @@
   text-decoration: none;
   
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .best-deals {
+    margin-bottom: 40px;
+    padding-top: 30px;
+  }
+  
+  .best-deals__blocksWrap {
+    flex-direction: column;
+    padding-right: 0;
+  }
+  
+  .best-deals__blockLeft {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  
+  .best-deals__block-link {
+    height: auto;
+    img {
+      height: auto;
+    }
+  }
+  
+  .best-deals__blockRight-row {
+    flex-direction: column;
+  }
+  
+  .best-deals__blockRight {
+    margin-bottom: 40px;
+    &--wide {
+      margin-bottom: 0;
+    }
+  }
 }

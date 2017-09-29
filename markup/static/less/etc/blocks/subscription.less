@@ -101,3 +101,33 @@
     outline: none;
   }
 }
+
+@media (max-width: 768px) {
+  .subscription {
+    min-height: 278px;
+    margin-bottom: 33px;
+    
+    background-image: url(%=static=%/content/subscription-mobile-bg.jpg);
+  }
+  
+  .subscription__block {
+    width: auto;
+  }
+  
+  .subscription__headline {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+  }
+  
+  .subscription__subWrap {
+    flex-direction: column;
+    input {
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    button {
+      margin-left: 0;
+    }
+  }
+}

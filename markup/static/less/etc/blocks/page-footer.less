@@ -225,3 +225,42 @@
   color: #b5b5b5;
   text-align: center; 
 }
+
+@media(max-width: 768px) {
+  .page-footer__rowTop {
+    position: relative;
+    .container {
+      flex-direction: column;
+      padding-top: 138px;
+    }
+  }
+  
+  .page-footer__rowMiddle-blocksWrap {
+    flex-direction: column;
+  }
+  
+  .page-footer__latestNews {
+    width: auto;
+  }
+  
+  .page-footer__latestNews-imgWrap {
+    width: 29.85074626865672%;
+    height: auto;
+    margin-right: 5.671641791044776%;
+  }
+  
+  .page-footer__latestNews-descriptionWrap {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-footer__latestNews-imgWrap {
+    width: 100px;
+    height: 100px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

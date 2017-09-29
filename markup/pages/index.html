@@ -69,35 +69,36 @@
                    
                     <div class="search-avia__tabs-content">
                       <form id="fromTour" class="search-avia__fromTour" action="action.php" method="post">
-                        <ul class="search-avia__fromTour-list">
-                          <li class="search-avia__fromTour-items">
-                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--mark">
-                              <label for="fromTourOut">Город отправления</label>
-                              <input id="fromTourOut" type="text" name="fromTourOut" placeholder="прим. Кишинев" required>
-                            </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
-                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--earth">
-                              <label for="fromTourTo">Страна</label>
-                              <input id="fromTourTo" type="text" name="fromTourTo" placeholder="прим. Turkey, Antalya" required>
-                            </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
-                            <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--avia">
-                              <label for="fromTourSelect">Тур</label>
-                              <select name="fromTourSelect" id="fromTourSelect">
-                                <option value="1">прим. Day flight</option>
-                                <option value="1">прим. Night flight</option>
-                              </select>
-                            </div>
-                          </li>
-                          <li class="search-avia__fromTour-items">
-                            <button class="search-avia__fromTour-search">Поиск</button>
-                          </li>
-                        </ul>
-                        
-                      </form>
-                      <form class="search-avia__fromTour-moreOption" action="action.php">
+                        <div class="search-avia__fromTour-listWrap">
+                          <ul class="search-avia__fromTour-list">
+                            <li class="search-avia__fromTour-items">
+                              <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--mark">
+                                <label for="fromTourOut">Город отправления</label>
+                                <input id="fromTourOut" type="text" name="fromTourOut" placeholder="прим. Кишинев" required>
+                              </div>
+                            </li>
+                            <li class="search-avia__fromTour-items">
+                              <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--earth">
+                                <label for="fromTourTo">Страна</label>
+                                <input id="fromTourTo" type="text" name="fromTourTo" placeholder="прим. Turkey, Antalya" required>
+                              </div>
+                            </li>
+                            <li class="search-avia__fromTour-items">
+                              <div class="search-avia__fromTour-itemsWrap search-avia__fromTour-itemsWrap--avia">
+                                <label for="fromTourSelect">Тур</label>
+                                <select name="fromTourSelect" id="fromTourSelect">
+                                  <option value="1">прим. Day flight</option>
+                                  <option value="1">прим. Night flight</option>
+                                </select>
+                              </div>
+                            </li>
+                            <li class="search-avia__fromTour-items">
+                              <button class="search-avia__fromTour-search">Поиск</button>
+                            </li>
+                          </ul>
+                        </div>
+                      
+                      <div class="search-avia__fromTour-moreOption" action="action.php">
                         <ul class="search-avia__fromTour-moreOption-list">
                           <li class="search-avia__fromTour-moreOption-items">
                             <label for="search-avia__fromTourDate">Даты вылета</label>
@@ -304,7 +305,13 @@
                           </div>
                           
                         </div>
+                      </div>
+                      
+                      
                       </form>
+                      
+                      
+                      
                     </div>
                     
                     <div class="search-avia__tabs-content">
@@ -857,6 +864,7 @@
                   
                 </div>
               
+                <a href="#" class="slider-promotion__link">Посмотреть все</a>
               </div>
               
             </div>
@@ -886,7 +894,10 @@
                      
                       <div class="news__tabs-contentBlock">
                         <div class="news__tabs-contentBlock-imgWrap news__tabs-contentBlock-imgWrap--wide">
-                          <img src="%=static=%img/content/news-wide-img.jpg" alt="Картинка 1">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-wide-img.jpg">
+                            <img src="%=static=%img/content/news-wide-img.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">НОВОЕ НАПРАВЛЕНИЕ / МОНАКО</p>
                         <h2 class="news__tabs-contentBlock-headline">Монако для избарнных: золотой курорт миллионеров</h2>
@@ -895,7 +906,10 @@
                       
                       <div class="news__tabs-contentBlock">
                         <div class="news__tabs-contentBlock-imgWrap">
-                          <img src="%=static=%img/content/news-img2.jpg" alt="">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-img2.jpg">
+                            <img src="%=static=%img/content/news-img2.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">ВОСТОК / ЭКСКУРСИИ</p>
                         <h2 class="news__tabs-contentBlock-headline">Стамбул: Жемчужина востока</h2>
@@ -904,9 +918,12 @@
                         <a href="#" class="news__tabs-contentBlock-link">Подробнее</a>
                       </div>
                       
-                      <div class="news__tabs-contentBlock">
+                      <div class="news__tabs-contentBlock news__tabs-contentBlock--hidden">
                         <div class="news__tabs-contentBlock-imgWrap">
-                          <img src="%=static=%img/content/news-img3.jpg" alt="">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-img3.jpg">
+                            <img src="%=static=%img/content/news-img3.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">ЭКЗОТИКА / РАЙ</p>
                         <h2 class="news__tabs-contentBlock-headline">Бали - Рай на земле</h2>
@@ -915,20 +932,26 @@
                         <a href="#" class="news__tabs-contentBlock-link">Подробнее</a>
                       </div>
                       
-                      <div class="news__tabs-contentBlock">
+                      <div class="news__tabs-contentBlock news__tabs-contentBlock--hidden news__tabs-contentBlock--positionTop">
                         <div class="news__tabs-contentBlock-imgWrap news__tabs-contentBlock-imgWrap--wide">
-                          <img src="%=static=%img/content/news-wide-img4.jpg" alt="">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-wide-img4.jpg">
+                            <img src="%=static=%img/content/news-wide-img4.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">ЗИМА / АЛЬПЫ</p>
                         <h2 class="news__tabs-contentBlock-headline">Альпийская свежасть: Готовь альпийские сани летом</h2>
                         <a href="#" class="news__tabs-contentBlock-link">Подробнее</a>
                       </div>
-                      
+                      <a href="#" class="slider-promotion__link">Посмотреть все</a>
                     </div>
                     <div class="news__tabs-content news__tabs-content--reverse">
                       <div class="news__tabs-contentBlock">
                         <div class="news__tabs-contentBlock-imgWrap news__tabs-contentBlock-imgWrap--wide">
-                          <img src="%=static=%img/content/news-wide-img.jpg" alt="Картинка 1">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-wide-img.jpg">
+                            <img src="%=static=%img/content/news-wide-img.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">НОВОЕ НАПРАВЛЕНИЕ / МОНАКО</p>
                         <h2 class="news__tabs-contentBlock-headline">Монако для избарнных: золотой курорт миллионеров</h2>
@@ -937,7 +960,10 @@
                       
                       <div class="news__tabs-contentBlock">
                         <div class="news__tabs-contentBlock-imgWrap">
-                          <img src="%=static=%img/content/news-img2.jpg" alt="">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-img2.jpg">
+                            <img src="%=static=%img/content/news-img2.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">ВОСТОК / ЭКСКУРСИИ</p>
                         <h2 class="news__tabs-contentBlock-headline">Стамбул: Жемчужина востока</h2>
@@ -946,9 +972,12 @@
                         <a href="#" class="news__tabs-contentBlock-link">Подробнее</a>
                       </div>
                       
-                      <div class="news__tabs-contentBlock">
+                      <div class="news__tabs-contentBlock news__tabs-contentBlock--hidden">
                         <div class="news__tabs-contentBlock-imgWrap">
-                          <img src="%=static=%img/content/news-img3.jpg" alt="">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-img3.jpg">
+                            <img src="%=static=%img/content/news-img3.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">ЭКЗОТИКА / РАЙ</p>
                         <h2 class="news__tabs-contentBlock-headline">Бали - Рай на земле</h2>
@@ -957,15 +986,19 @@
                         <a href="#" class="news__tabs-contentBlock-link">Подробнее</a>
                       </div>
                       
-                      <div class="news__tabs-contentBlock">
+                      <div class="news__tabs-contentBlock news__tabs-contentBlock--hidden news__tabs-contentBlock--positionTop">
                         <div class="news__tabs-contentBlock-imgWrap news__tabs-contentBlock-imgWrap--wide">
-                          <img src="%=static=%img/content/news-wide-img4.jpg" alt="">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/news-wide-img4.jpg">
+                            <img src="%=static=%img/content/news-wide-img4.jpg" alt="Картинка 1">
+                          </picture>
                         </div>
                         <p class="news__tabs-contentBlock-title">ЗИМА / АЛЬПЫ</p>
                         <h2 class="news__tabs-contentBlock-headline">Альпийская свежасть: Готовь альпийские сани летом</h2>
                         <a href="#" class="news__tabs-contentBlock-link">Подробнее</a>
                       </div>
-                      
+                       .
+                      <a href="#" class="slider-promotion__link">Посмотреть все</a>
                     </div>
                   </div>
                 </div>
@@ -1027,7 +1060,10 @@
                 <div class="best-deals__blocksWrap">
                   <div class="best-deals__blockLeft">
                     <a class="best-deals__block-link best-deals__block-link--height" href="#">
-                      <img src="%=static=%img/content/best-deals-img1.jpg" alt="Картинка">
+                      <picture>
+                        <source media="(max-width: 768px)" srcset="%=static=%img/content/best-deals-img1-mobile.jpg">
+                        <img src="%=static=%img/content/best-deals-img1.jpg" alt="Картинка">
+                      </picture>
                     </a>
                     <div class="best-deals__titleWrap">
                       <h2 class="best-deals__block-link-headline">Анталия горячие туры</h2>
@@ -1038,7 +1074,10 @@
                     <div class="best-deals__blockRight-row">
                       <div class="best-deals__blockRight">
                         <a class="best-deals__block-link best-deals__block-link--right" href="#">
-                          <img src="%=static=%img/content/best-deals-img2.jpg" alt="Картинка">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/best-deals-img2-mobile.jpg">
+                            <img src="%=static=%img/content/best-deals-img2.jpg" alt="Картинка">
+                          </picture>
                         </a>
                         <div class="best-deals__titleWrap">
                           <h2 class="best-deals__block-link-headline">Анталия горячие туры</h2>
@@ -1047,7 +1086,10 @@
                       </div>
                       <div class="best-deals__blockRight">
                         <a class="best-deals__block-link best-deals__block-link--right" href="#">
-                          <img src="%=static=%img/content/best-deals-img3.jpg" alt="Картинка">
+                          <picture>
+                            <source media="(max-width: 768px)" srcset="%=static=%img/content/best-deals-img3-mobile.jpg">
+                            <img src="%=static=%img/content/best-deals-img3.jpg" alt="Картинка">
+                          </picture>
                         </a>
                         <div class="best-deals__titleWrap">
                           <h2 class="best-deals__block-link-headline">Бали</h2>
@@ -1057,7 +1099,10 @@
                     </div>
                     <div class="best-deals__blockRight best-deals__blockRight--wide">
                       <a class="best-deals__block-link" href="#">
-                        <img src="%=static=%img/content/best-deals-img4.jpg" alt="Картинка">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="%=static=%img/content/best-deals-img4-mobile.jpg">
+                          <img src="%=static=%img/content/best-deals-img4.jpg" alt="Картинка">
+                        </picture>
                       </a>
                       <div class="best-deals__titleWrap">
                         <h2 class="best-deals__block-link-headline">Бали</h2>
@@ -1077,7 +1122,7 @@
                 <div class="logo logo--footer">
                   <img src="%=static=%img/content/logo-footer.png" alt="Гранд Вояж">
                 </div>
-                <nav class="main-nav">
+                <nav class="main-nav main-nav--footer">
                   <ul class="main-nav__list main-nav__list--footer">
                     <li class="main-nav__items"><a href="#" class="main-nav__item">Туры</a></li>
                     <li class="main-nav__items"><a href="#" class="main-nav__item">Страны</a></li>

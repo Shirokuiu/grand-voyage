@@ -171,6 +171,22 @@
 @media (max-width: 768px) {
   .main-nav {
     width: 100%;
+    &--footer {
+      order: 2;
+      .main-nav__list {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: auto;
+      }
+      .main-nav__items {
+        width: auto;
+        //margin-right: 40px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
   }
   
   .main-nav__list {
