@@ -1,18 +1,21 @@
 $(function () {
-  $('.slider-promotion').owlCarousel({
-    smartSpeed: 1000,
+  $(".slider-promotion").owlCarousel({
+    loop:true,
+    margin:20,
     nav: true,
+    autoplay: false,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    smartSpeed: 1000,
     responsive:{
         0:{
-            items:1
+            items:1.1
         },
         768:{
-            items:1,
-            margin:0
+            items:1.1
         },
-        1210:{
-            items:3,
-            margin: 20
+        1000:{
+            items:3
         }
     }
   });
