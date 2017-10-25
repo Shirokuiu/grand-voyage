@@ -59,141 +59,185 @@
       <main class="page-content">
        
        <div class="countries">
-         <div class="container">
-          <div class="countries__wrapheadblocks">
+         <div class="countries__imgWrap">
+           <picture>
+             <source media="(max-width: 768px)" srcset="%=static=%img/content/countries-imgBg-mobile.jpg">
+             <img src="%=static=%img/content/countries-imgBg.jpg" alt="Картинка">
+           </picture>
+           <div class="container">
              <h2 class="countries__headline">Список стран от GrandVoyage</h2>
-             <h3 class="countries__subtitle">Эксклюзивные предложения, отдых вашей мечты!</h3>
-          </div>
-           
-           <div class="country-nav">
-              <h2 class="country-nav__headline">Сортировать по:</h2>
-              <ul class="country-nav__list">
-                <li class="country-nav__items country-nav__items--popular">
-                  <input id="cityNavPopular" type="checkbox" name="cityNavPopular">
-                  <label for="cityNavPopular">Популярности
-                    <span></span>
-                  </label>
-                  <div class="country-nav__itemBorder"></div>
-                </li> 
-                <li class="country-nav__items country-nav__items--direction">
-                  <input id="cityNavNew" type="checkbox" name="cityNavNew">
-                  <label for="cityNavNew">Новые направления
-                    <span></span>
-                  </label>
-                  <div class="country-nav__itemBorder"></div>
-                </li>
-                <li class="country-nav__items country-nav__items--trends">
-                  <input id="cityNavTrends" type="checkbox" name="cityNavTrends">
-                  <label for="cityNavTrends">Тренды сезона
-                    <span></span>
-                  </label>
-                  <div class="country-nav__itemBorder"></div>
-                </li>
-                <li class="country-nav__items">
-                  <select name="cityNavSelect" id="cityNavSelect">
-                   <option value="1">Выберите страну</option>
-                  </select>
-                  <div class="country-nav__itemBorder"></div>
-                </li>
-              </ul>
-            </div>
-           
-           <div class="countries__wrapCarts">
-             <div class="countries__cart">
-               <div class="countries__wrapImg">
-                 <img src="%=static=%img/content/countriesCartImg1.jpg" alt="картинка">
-               </div>
-               <div class="countries__wrapdescription">
-                 <div class="countries__wrapHeadline">
-                   <h2>Мальдивы</h2>
-                   <span><img src="%=static=%img/content/cartcountriesimg1.jpg" alt=""></span>
-                 </div>
-                   <p class="countries__text">Мальдивы, официальное название Мальдивская Республика — государство в Южной Азии, располагающееся на группе атоллов в Индийском океане, находящихся к югу от Индии. Столица — город Мале.</p>
-                   <ul class="counties__list">
-                     <li class="countries__items">
-                         <span>Столица</span>
-                         <span>Мале</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Телефонный код</span>
-                         <span>+960</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Валюта</span>
-                         <span>Мальдиваская руфия</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Континент</span>
-                         <span>Азия</span>
-                     </li>
-                   </ul>
-                   <a class="countries__excerpt" href="one-country.html">подробнее</a>
-               </div>
-             </div>
+             <h3 class="countries__title">Эксклюзивные предложения, отдых вашей мечты!</h3>
            </div>
-           <div class="countries__wrapCarts">
-             <div class="countries__cart">
-               <div class="countries__wrapImg">
-                 <img src="%=static=%img/content/countriesCartImg2.jpg" alt="картинка">
+         </div>
+         <div class="countries__searchWrap">
+           <div class="container">
+             <div class="countries__search">
+               <div class="countries__search-block">
+                
+                 <ul class="countries__search-block-list">
+                   <li class="countries__search-block-items countries__search-block-items--title">Европа
+                     <span></span>
+                   </li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Австрия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Андорра</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Бельгия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Великобритания</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Венгрия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Германия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Греция</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ирландия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Исландия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Испания</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Италия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Кипр</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Люксембург</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Мальта</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Нидерланды</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Норвегия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Португалия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Россия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Финляндия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Франция</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Хорватия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Черногория</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Чехия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Швейцария</a></li>
+                 </ul>
+                 
+                 <ul class="countries__search-block-list">
+                   <li class="countries__search-block-items countries__search-block-items--title">Азия, Ближний и Средний Восток
+                     <span></span>
+                   </li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Азербайджан</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Армения</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Бахрейн</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Вьетнам</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Гонконг</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Израиль</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Индия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Индонезия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Иордания</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Камбоджа</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Китай</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Корея</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Малайзия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">ОАЭ</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Оман</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сингапур</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Таиланд</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Турция</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Узбекистан</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Филиппины</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Шри-Ланка</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Япония</a></li>
+                 </ul>
                </div>
-               <div class="countries__wrapdescription">
-                 <div class="countries__wrapHeadline">
-                   <h2>Тайланд</h2>
-                   <span><img src="%=static=%img/content/cartcountriesimg2.jpg" alt=""></span>
-                 </div>
-                   <p class="countries__text">Тайланд, Королевство Таиланд, до 1939 и в 1945—1948 гг. Сиам — государство Юго-Восточной Азии, расположенное в юго-западной части полуострова Индокитай и в северной части полуострова Малакка</p>
-                   <ul class="counties__list">
-                     <li class="countries__items">
-                         <span>Столица</span>
-                         <span>Мале</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Телефонный код</span>
-                         <span>+960</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Валюта</span>
-                         <span>Мальдиваская руфия</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Континент</span>
-                         <span>Азия</span>
-                     </li>
-                   </ul>
-                   <a class="countries__excerpt" href="#">подробнее</a>
+               <div class="countries__search-block">
+                
+                 <ul class="countries__search-block-list">
+                   <li class="countries__search-block-items countries__search-block-items--title">Америка и страны Карибского бассейна
+                     <span></span>
+                   </li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ангилья</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Антигуа и Барбуда</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Аргентина</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Багамские острова</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Барбадос</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Бермудские оcтрова</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Бразилия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Брит. Виргинские острова</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Доминикана</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Колумбия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Коста-Рика</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Куба</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Мексика</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Перу</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Пуэрто-Рико (США)</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">США</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сен-Бартельми</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сен-Мартен</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сент-Китс и Невис</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сент-Люсия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Теркс и Кайкос</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Чили</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Эквадор</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Ямайка</a></li>
+                 </ul>
+                 
+                 <ul class="countries__search-block-list">
+                   <li class="countries__search-block-items countries__search-block-items--title">Австралия и Океания
+                     <span></span>
+                   </li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Австралия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Вануату</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Кука острова</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Новая Зеландия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Новая Каледония</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Таити</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Фиджи</a></li>
+                 </ul>
+                 
                </div>
-             </div>
-           </div>
-           <div class="countries__wrapCarts">
-             <div class="countries__cart">
-               <div class="countries__wrapImg">
-                 <img src="%=static=%img/content/countriesCartImg3.jpg" alt="картинка">
-               </div>
-               <div class="countries__wrapdescription">
-                 <div class="countries__wrapHeadline">
-                   <h2>Гавайи</h2>
-                   <span><img src="%=static=%img/content/cartcountriesimg3.jpg" alt=""></span>
-                 </div>
-                   <p class="countries__text">Мальдивы, официальное название Мальдивская Республика — государство в Южной Азии, располагающееся на группе атоллов в Индийском океане, находящихся к югу от Индии. Столица — город Мале.</p>
-                   <ul class="counties__list">
-                     <li class="countries__items">
-                         <span>Столица</span>
-                         <span>Мале</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Телефонный код</span>
-                         <span>+960</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Валюта</span>
-                         <span>Мальдиваская руфия</span>
-                     </li>
-                     <li class="countries__items">
-                         <span>Континент</span>
-                         <span>Азия</span>
-                     </li>
-                   </ul>
-                   <a class="countries__excerpt" href="#">подробнее</a>
+               <div class="countries__search-block">
+                 
+                 <ul class="countries__search-block-list">
+                   <li class="countries__search-block-items countries__search-block-items--title">Африка и Индийский океан
+                     <span></span>
+                   </li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ботсвана</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Замбия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Зимбабве</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Кения</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Маврикий</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Мальдивы</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Марокко</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Намибия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Реюньон</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сейшелы</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Танзания</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">ЮАР</a></li>
+                 </ul>
+                 
+                 <ul class="countries__search-block-list">
+                   <li class="countries__search-block-items countries__search-block-items--title">Безвизовые страны
+                     <span></span>
+                   </li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Азербайджан</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Антигуа и Барбуда</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Аргентина</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Багамские острова</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Барбадос</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Бразилия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Вануату</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Вьетнам</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Гонконг</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Доминикана</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Израиль</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Индонезия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Корея</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Куба</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Кука острова</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Маврикий</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Малайзия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Мальдивы</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Марокко</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Намибия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">ОАЭ</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Перу</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Россия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сейшелы</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сент-Люсия</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Таиланд</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Турция</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Узбекистан</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Фиджи</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Черногория</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Чили</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Эквадор</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">ЮАР</a></li>
+                   <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ямайка</a></li>
+                 </ul>
+                 
                </div>
              </div>
            </div>
@@ -201,52 +245,52 @@
        </div>
         
         <div class="contacts">
-          <div class="contacts__headlineBlock">
-            <div class="container">
-              <h2 class="contacts__headline">Наши контакты</h2>
-              <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
-              <div class="contacts__socialsWrap">
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+              <div class="contacts__headlineBlock">
+                <div class="container">
+                  <h2 class="contacts__headline">Наши контакты</h2>
+                  <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
+                  <div class="contacts__socialsWrap">
+                    <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
+                    <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
+                    <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
+                    <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__descriptionBlock">
+                <div class="container">
+                  <div class="contacts__formWrap">
+                    <h2 class="contacts__form-headline">Ответим на любой ваш вопрос</h2>
+                    <form id="contactsForm" class="contacts__form"  action="action.php" method="post">
+                      <ul class="contacts__form-list">
+                        <li class="contacts__form-items">
+                          <input type="text" name="contactsUserName" placeholder="Введите Ваше имя" required>
+                        </li>
+                        <li class="contacts__form-items">
+                          <input type="email" name="contactsUserMail" placeholder="Ваша электронная почта" required>
+                        </li>
+                        <li class="contacts__form-items">
+                          <textarea name="contactsUserText" placeholder="Введите сообщение" required></textarea>
+                        </li>
+                      </ul>
+                      <p class="contacts__form-notifyText">*Ваши данные не будут опубликованы или переданы третьим лицам</p>
+                      <button class="contacts__form-button" type="submit">Отправить</button>
+                    </form>
+                  </div>
+                  <div class="contacts__addressWrap">
+                    <h2 class="contacts__form-headline">Наше месторасположение</h2>
+                    <div class="contacts__address-map"></div>
+                    <h2 class="contacts__address-healineList">Контактные данные</h2>
+                    <ul class="contacts__address-list">
+                      <li class="contacts__address-items contacts__address-items--mark">Chisinau, Str. Alexandru cel Bun, 89/2</li>
+                      <li class="contacts__address-items contacts__address-items--tel">0 (22) 56 56 56; 0 (69) 45 25 12</li>
+                      <li class="contacts__address-items contacts__address-items--mail">grandvoyage@tourism.md</li>
+                      <li class="contacts__address-items contacts__address-items--watches">Пн - Пт 9:30 - 19:00, Сб 10:00 - 17:00</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="contacts__descriptionBlock">
-            <div class="container">
-              <div class="contacts__formWrap">
-                <h2 class="contacts__form-headline">Ответим на любой ваш вопрос</h2>
-                <form id="contactsForm" class="contacts__form"  action="action.php" method="post">
-                  <ul class="contacts__form-list">
-                    <li class="contacts__form-items">
-                      <input type="text" name="contactsUserName" placeholder="Введите Ваше имя" required>
-                    </li>
-                    <li class="contacts__form-items">
-                      <input type="email" name="contactsUserMail" placeholder="Ваша электронная почта" required>
-                    </li>
-                    <li class="contacts__form-items">
-                      <textarea name="contactsUserText" placeholder="Введите сообщение" required></textarea>
-                    </li>
-                  </ul>
-                  <p class="contacts__form-notifyText">*Ваши данные не будут опубликованы или переданы третьим лицам</p>
-                  <button class="contacts__form-button" type="submit">Отправить</button>
-                </form>
-              </div>
-              <div class="contacts__addressWrap">
-                <h2 class="contacts__form-headline">Наше месторасположение</h2>
-                <div class="contacts__address-map"></div>
-                <h2 class="contacts__address-healineList">Контактные данные</h2>
-                <ul class="contacts__address-list">
-                  <li class="contacts__address-items contacts__address-items--mark">Chisinau, Str. Alexandru cel Bun, 89/2</li>
-                  <li class="contacts__address-items contacts__address-items--tel">0 (22) 56 56 56; 0 (69) 45 25 12</li>
-                  <li class="contacts__address-items contacts__address-items--mail">grandvoyage@tourism.md</li>
-                  <li class="contacts__address-items contacts__address-items--watches">Пн - Пт 9:30 - 19:00, Сб 10:00 - 17:00</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <div class="best-deals">
           <div class="container">

@@ -2,22 +2,23 @@
   margin-bottom: 97px;
 }
 
-.contacts__headlineBlock {
-  display: flex;
-  flex-direction: column;
-  min-height: 346px;
-  margin-bottom: 71px;
-  
-  background-image: url(%=static=%content/contacts-bg.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+.contacts__imgWrap {
+  position: relative;
+  img {
+    display: block;
+  }
   .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    align-items: center;
+    margin: auto;
   }
 }
 
@@ -349,6 +350,7 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 18px;
+    text-align: center;
   }
   
   .contacts__descriptionBlock {
