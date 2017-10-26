@@ -1,4 +1,6 @@
 .tour {
+  padding-top: 60px;
+  
   background-color: #FCFCFC;
 }
 
@@ -498,5 +500,186 @@
     height: 3px;
     
     background-color: #BF0112;
+  }
+}
+
+@media (max-width: 768px) {
+  .tour {
+    padding-top: 0;
+    .container {
+      padding: 0;
+    }
+  }
+  
+  .tour__galery {
+    .owl-nav {
+      top: 0;
+      bottom: 0;
+      
+      align-items: center;
+    }
+    .owl-dots {
+      display: none;
+    }
+  }
+  
+  .tour__galery-img-descriptionBlocksWrap {
+    padding: 20px 5.333333333333333%;
+  }
+  
+  .tour__galery-img-headline {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  
+  .tour__galery-img-titleDateIn,
+  .tour__galery-img-titleDateTo {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  
+  .tour__galery-img-price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  
+  .tour__galery-img-titledescription {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  
+  .tour__galery-img-socialsWrap {
+    justify-content: center;
+  }
+  
+  .tour__descriptionWrap {
+    flex-direction: column;
+  }
+  
+  .tour__descriptionBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .tour__descriptionBlock-headline {
+    order: 1;
+    margin-bottom: 11px;
+    padding-left: 5.333333333333333%;
+    padding-right: 5.333333333333333%;
+    
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+  }
+  
+  .tour__descriptionBlock-text {
+    order: 2;
+    margin-bottom: 34px;
+    padding-left: 5.333333333333333%;
+    padding-right: 5.333333333333333%;
+  }
+  
+  .tour__descriptionBlock-otherHotels {
+    order: 4;
+    margin-bottom: 32px;
+  }
+  
+  .tour__descriptionBlock-descriptionTour {
+    order: 5;
+  }
+  
+  .tour__descriptionBlock-otherHotels-headline {
+    margin-bottom: 14px;
+    padding-left: 5.333333333333333%;
+    padding-right: 5.333333333333333%;
+  }
+  
+  .tour__descriptionBlock-otherHotels-items {
+    padding-left: 5.333333333333333%;
+    padding-right: 5.333333333333333%;
+    
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    &--headline {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .tour__descriptionBlock-otherHotels-item {
+    &--hotel-icon,
+    &--price{
+      padding-left: 36px;
+    }
+  }
+  
+  .tour__descriptionBlock-otherHotels-item {
+    &--hotel {
+      line-height: 40px;
+    }
+  }
+  
+  .tour__descriptionBlock-descriptionTour-dayDescriptionWrap {
+    border-bottom: 1px solid #ececec;
+    &:last-child {
+      padding-bottom: 29px;
+    }
+  }
+  
+  .tour__descriptionBlock-descriptionTour-dayWrap {
+    padding-left: 5.333333333333333%;
+    padding-right: 5.333333333333333%;
+  }
+  
+  .tour__descriptionBlock-descriptionTour-day-attractionWrap {
+    p {
+      width: auto;
+    }
+  }
+  
+  .tour__descriptionBlock-descriptionTour-day-attraction-img {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  .tour__description-orderBlock {
+    order: 3;
+    width: auto;
+  }
+  
+  .tour__description-orderBlock-descriptionWrap {
+    margin-bottom: 31px;
+    padding-left: 5.333333333333333%;
+    padding-right: 5.333333333333333%;
+    
+    border: none;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-radius: 0;
+  }
+  
+  .tour__description-orderBlock-link {
+    position: fixed;
+    top: 88%;
+    left: 5.333333333333333%;
+    right: 5.333333333333333%;
+    z-index: 50;
+    
+    margin-bottom: 0;
+    
+    color: #bf0112;
+    
+    background-color: #fff;
+    
+    border-radius: 100px;
+    border: 1px solid #ececec;
   }
 }

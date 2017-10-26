@@ -12,7 +12,7 @@
           <div class="container">
             <div class="logo">
               <a href="index.html">
-                <img src="%=static=%img/content/logo.png" alt="Гранд Вояж">
+                <img src="%=static=%img/content/logo.svg" alt="Гранд Вояж">
               </a>
             </div>
             <div class="page-header__search">
@@ -198,7 +198,7 @@
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">ЮАР</a></li>
                  </ul>
                  
-                 <ul class="countries__search-block-list">
+                 <ul class="countries__search-block-list countries__search-block-list--marginBottom">
                    <li class="countries__search-block-items countries__search-block-items--title">Безвизовые страны
                      <span></span>
                    </li>
@@ -246,14 +246,20 @@
         
         <div class="contacts">
               <div class="contacts__headlineBlock">
-                <div class="container">
-                  <h2 class="contacts__headline">Наши контакты</h2>
-                  <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
-                  <div class="contacts__socialsWrap">
-                    <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
-                    <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
-                    <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
-                    <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+                <div class="contacts__imgWrap">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="%=static=%img/content/contacts-Bg-mobile.jpg">
+                    <img src="%=static=%img/content/contacts-Bg.jpg" alt="Картинка">
+                  </picture>
+                  <div class="container">
+                    <h2 class="contacts__headline">Наши контакты</h2>
+                    <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
+                    <div class="contacts__socialsWrap">
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -347,7 +353,7 @@
         <div class="page-footer__rowTop">
           <div class="container">
             <div class="logo logo--footer">
-              <img src="%=static=%img/content/logo-footer.png" alt="Гранд Вояж">
+              <img src="%=static=%img/content/logo-footer.svg" alt="Гранд Вояж">
             </div>
             <nav class="main-nav main-nav--footer">
               <ul class="main-nav__list main-nav__list--footer">

@@ -124,4 +124,23 @@ $(function () {
     
     $(this).parents('.our-team__cart-worker').find(ourTeamCartWorkerRateLink).removeClass('our-team__cart-worker-rateLink--active');
   });
+  
+  var width = $(window).outerWidth();
+  
+  if (width <= 768) {
+    $('.tour__descriptionBlock').prepend($('.tour__description-orderBlock'));
+  } else {
+    $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
+  };
+  
+  $(window).resize(function () {
+    var i = $(window).outerWidth();
+    
+    if (i <= 768) {
+      $('.tour__descriptionBlock').prepend($('.tour__description-orderBlock'));
+    } else {
+      $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
+    };
+  });
+  
 });
