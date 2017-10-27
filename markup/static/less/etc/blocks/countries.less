@@ -56,6 +56,16 @@
   
   border-radius: 6px;
   border: 1px solid #ececec;
+  &--oneCountry {
+    margin-right: 67px;
+    padding-right: 237px;
+    .countries__search-block {
+      margin-top: 48px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .countries__search-block-list {
@@ -154,6 +164,29 @@
     background-color: #fcfcfc;
     
     border: none;
+    &--oneCountry {
+      position: static;
+      
+      margin-right: 0;
+      .countries__search-block {
+        margin-top: 0;
+      }
+      .countries__search-block-list {
+        border: none;
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+      .countries__search-block-items {  
+        display: block;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &--title {
+          display: block;
+        }
+      }
+    } 
   }
   
   .countries__search-block-list {

@@ -107,6 +107,24 @@ $(function () {
       $(".news__tabs-content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
   
+  $(".one-country__tabsNav-content").not(":first").hide();
+  $(".one-country__tabsNav-control").click(function() {
+      $(".one-country__tabsNav-control").removeClass("active").eq($(this).index()).addClass("active");
+      $(".one-country__tabsNav-content").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
+  
+  $(".one-country__tabs-content").not(":first").hide();
+  $(".one-country__tabs-control").click(function() {
+      $(".one-country__tabs-control").removeClass("active").eq($(this).index()).addClass("active");
+      $(".one-country__tabs-content").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
+  
+  $(".one-country__tabsList-content").not(":first").hide();
+  $(".one-country__tabsList-control").click(function() {
+      $(".one-country__tabsList-control").removeClass("active").eq($(this).index()).addClass("active");
+      $(".one-country__tabsList-content").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
+  
   var ourTeamCartWorkerRateLink = $('.our-team__cart-worker-rateLink');
   var ourTeamCartWorkerRateBlock = $('.our-team__cart-worker-rateBlock');
   var ourTeamCartWorkerRateBlockExit = $('.our-team__cart-worker-rateBlock-exit');
