@@ -6,7 +6,11 @@
   <body class="page">
     %=symbols=%
     <div class="page__wrapper">
-      <header class="page-header page-header--countries">
+      <div class="mobile-buttons">
+        <a href="#" class="mobile-button__link">Заказать</a>
+        <a href="#" class="mobile-button__link">Сохранить</a>
+      </div>
+      <header class="page-header">
        
         <div class="page-header__rowTop">
           <div class="container">
@@ -436,7 +440,7 @@
        </div>
              
        <div class="tour__description-orderBlock">
-         <a href="#" class="tour__description-orderBlock-link">Заказать тур</a>
+         <a href="#" class="tour__description-orderBlock-link">Заказать тур $<span> 3000</span></a>
          <a href="#" class="tour__description-orderBlock-link tour__description-orderBlock-link--save">Сохранить в мои путешествия</a>
          <div class="tour__description-orderBlock-descriptionWrap tour__description-orderBlock-descriptionWrap--link1-offer">
            <h2 class="tour__description-orderBlock-description-headline">В стоимость тура входит:</h2>
@@ -496,7 +500,7 @@
            <h3 class="countries__subtitle">Туры которые могут вам понравиться</h3>
          </div>
          
-         <div class="slider-promotion owl-carousel">
+         <div class="slider-promotion slider-promotion--linkOffer owl-carousel">
 
           <div class="slider-promotion__slide">
             <div class="slider-promotion__slide-titleWrap">
@@ -703,52 +707,58 @@
        </div>
         
         <div class="contacts">
-          <div class="contacts__headlineBlock">
-            <div class="container">
-              <h2 class="contacts__headline">Наши контакты</h2>
-              <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
-              <div class="contacts__socialsWrap">
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+              <div class="contacts__headlineBlock">
+                <div class="contacts__imgWrap">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="%=static=%img/content/contacts-Bg-mobile.jpg">
+                    <img src="%=static=%img/content/contacts-Bg.jpg" alt="Картинка">
+                  </picture>
+                  <div class="container">
+                    <h2 class="contacts__headline">Наши контакты</h2>
+                    <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
+                    <div class="contacts__socialsWrap">
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__descriptionBlock">
+                <div class="container">
+                  <div class="contacts__formWrap">
+                    <h2 class="contacts__form-headline">Ответим на любой ваш вопрос</h2>
+                    <form id="contactsForm" class="contacts__form"  action="action.php" method="post">
+                      <ul class="contacts__form-list">
+                        <li class="contacts__form-items">
+                          <input type="text" name="contactsUserName" placeholder="Введите Ваше имя" required>
+                        </li>
+                        <li class="contacts__form-items">
+                          <input type="email" name="contactsUserMail" placeholder="Ваша электронная почта" required>
+                        </li>
+                        <li class="contacts__form-items">
+                          <textarea name="contactsUserText" placeholder="Введите сообщение" required></textarea>
+                        </li>
+                      </ul>
+                      <p class="contacts__form-notifyText">*Ваши данные не будут опубликованы или переданы третьим лицам</p>
+                      <button class="contacts__form-button" type="submit">Отправить</button>
+                    </form>
+                  </div>
+                  <div class="contacts__addressWrap">
+                    <h2 class="contacts__form-headline">Наше месторасположение</h2>
+                    <div class="contacts__address-map"></div>
+                    <h2 class="contacts__address-healineList">Контактные данные</h2>
+                    <ul class="contacts__address-list">
+                      <li class="contacts__address-items contacts__address-items--mark">Chisinau, Str. Alexandru cel Bun, 89/2</li>
+                      <li class="contacts__address-items contacts__address-items--tel">0 (22) 56 56 56; 0 (69) 45 25 12</li>
+                      <li class="contacts__address-items contacts__address-items--mail">grandvoyage@tourism.md</li>
+                      <li class="contacts__address-items contacts__address-items--watches">Пн - Пт 9:30 - 19:00, Сб 10:00 - 17:00</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="contacts__descriptionBlock">
-            <div class="container">
-              <div class="contacts__formWrap">
-                <h2 class="contacts__form-headline">Ответим на любой ваш вопрос</h2>
-                <form id="contactsForm" class="contacts__form"  action="action.php" method="post">
-                  <ul class="contacts__form-list">
-                    <li class="contacts__form-items">
-                      <input type="text" name="contactsUserName" placeholder="Введите Ваше имя" required>
-                    </li>
-                    <li class="contacts__form-items">
-                      <input type="email" name="contactsUserMail" placeholder="Ваша электронная почта" required>
-                    </li>
-                    <li class="contacts__form-items">
-                      <textarea name="contactsUserText" placeholder="Введите сообщение" required></textarea>
-                    </li>
-                  </ul>
-                  <p class="contacts__form-notifyText">*Ваши данные не будут опубликованы или переданы третьим лицам</p>
-                  <button class="contacts__form-button" type="submit">Отправить</button>
-                </form>
-              </div>
-              <div class="contacts__addressWrap">
-                <h2 class="contacts__form-headline">Наше месторасположение</h2>
-                <div class="contacts__address-map"></div>
-                <h2 class="contacts__address-healineList">Контактные данные</h2>
-                <ul class="contacts__address-list">
-                  <li class="contacts__address-items contacts__address-items--mark">Chisinau, Str. Alexandru cel Bun, 89/2</li>
-                  <li class="contacts__address-items contacts__address-items--tel">0 (22) 56 56 56; 0 (69) 45 25 12</li>
-                  <li class="contacts__address-items contacts__address-items--mail">grandvoyage@tourism.md</li>
-                  <li class="contacts__address-items contacts__address-items--watches">Пн - Пт 9:30 - 19:00, Сб 10:00 - 17:00</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <div class="best-deals">
           <div class="container">

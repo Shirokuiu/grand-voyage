@@ -78,6 +78,11 @@
   right: 73px;
   
   display: flex;
+  &--oneCity {
+    top: 39px;
+    right: 103px;
+    z-index: 10;
+  }
 }
 
 .one-country__tabsNav-control {
@@ -258,6 +263,15 @@
     margin-bottom: 9px;
   }
   
+  .one-country__tabsNav-control {
+    &:first-child {
+      margin-right: 16%;
+    }
+    &--slider {
+      transform: rotate(90deg);
+    }
+  }
+  
   .one-country__description-text {
     margin-bottom: 25px;
   }
@@ -274,6 +288,7 @@
   
   .one-country__sliderWrap {
     padding-top: 100px;
+    padding-bottom: 61px;
   }
   
   .one-country__sliderHeadline {
@@ -286,6 +301,13 @@
     top: 140px;
     right: 0;
     z-index: 20;
+    &--oneCity {
+      top: 295px;
+      left: 0;
+      right: 0;
+
+      justify-content: center;
+    }
   }
   
   .one-country__sliderTitle-wrap {

@@ -6,7 +6,7 @@
   <body class="page">
     %=symbols=%
     <div class="page__wrapper">
-      <header class="page-header page-header--contacts">
+      <header class="page-header">
        
         <div class="page-header__rowTop">
           <div class="container">
@@ -58,19 +58,22 @@
       </header>
       <main class="page-content">
        
-        <div class="contacts-description">
-          <div class="container">
-            <div class="contacts-description__blockText">
-              <h2>Мале, Мальдивы</h2>
-              <h3>Одна из самых маленьких столиц мира</h3>
-              <p>Туриста, приехавшего сюда на экскурсию, поразит контраст Мале по сравнению с другими островами. После тропического рая малообитаемых островов, он впечатляет своими небоскребами и автомагистралями — здесь даже нет естественных пляжей. Впрочем, недавно на юго-западе острова была создана искусственная зона отдыха, куда часто приезжают люди, живущие и работающие на Мале — особенно по вечерам, когда становится прохладнее. Впрочем, туристы приезжают сюда вовсе не для того, чтобы лежать на пляжах.</p>
-              <p>Главная улица города — набережная Boduthakurufaanu Magu. Здесь находятся здания правительства, банки и офисы. Посередине — сквер Jumhooree Maidhaan, справа от которого — причал № 1 (президентский) и № 9-10 (паромы до аэропорта).</p>
-            </div>
-            <div class="contacts-description__blockImg">
-              <img src="%=static=%img/content/one-city-img.jpg" alt="Картинка">
-            </div>
-          </div>
-        </div>
+        <div class="one-country__descriptionWrap">
+           <div class="container">
+             <div class="one-country__description">
+               <h2 class="one-country__description-headline">Мальдивы</h2>
+               <h3 class="one-country__description-title">Одна из самых маленьких столиц мира</h3>
+               <p class="one-country__description-text">Туриста, приехавшего сюда на экскурсию, поразит контраст Мале по сравнению с другими островами. После тропического рая малообитаемых островов, он впечатляет своими небоскребами и автомагистралями — здесь даже нет естественных пляжей. Впрочем, недавно на юго-западе острова была создана искусственная зона отдыха, куда часто приезжают люди, живущие и работающие на Мале — особенно по вечерам, когда становится прохладнее. Впрочем, туристы приезжают сюда вовсе не для того, чтобы лежать на пляжах.</p>
+               <p class="one-country__description-text">Главная улица города — набережная Boduthakurufaanu Magu. Здесь находятся здания правительства, банки и офисы. Посередине — сквер Jumhooree Maidhaan, справа от которого — причал № 1 (президентский) и № 9-10 (паромы до аэропорта).</p>
+             </div>
+             <div class="one-country__descriptionImg">
+               <picture>
+                 <source media="(max-width: 768px)" srcset="%=static=%img/content/one-country-descriptionImg-mobile.jpg">
+                 <img src="%=static=%img/content/one-country-descriptionImg.jpg" alt="Картинка">
+               </picture>
+             </div>
+           </div>
+         </div>
         
         <div class="our-team our-team--one-city">
           <div class="container">
@@ -79,350 +82,574 @@
               <h3>Сервис премиум класса на Мальдивах</h3>
             </div>
             
-            <div class="country-nav">
-              <h2 class="country-nav__headline">Сортировать по:</h2>
-              <ul class="country-nav__list">
-                <li class="country-nav__items country-nav__items--popular">
-                  <input id="cityNavPopular" type="checkbox" name="cityNavPopular">
-                  <label for="cityNavPopular">Популярности
-                    <span></span>
-                  </label>
-                  <div class="country-nav__itemBorder"></div>
-                </li> 
-                <li class="country-nav__items country-nav__items--direction">
-                  <input id="cityNavNew" type="checkbox" name="cityNavNew">
-                  <label for="cityNavNew">Новые направления
-                    <span></span>
-                  </label>
-                  <div class="country-nav__itemBorder"></div>
-                </li>
-                <li class="country-nav__items country-nav__items--trends">
-                  <input id="cityNavTrends" type="checkbox" name="cityNavTrends">
-                  <label for="cityNavTrends">Тренды сезона
-                    <span></span>
-                  </label>
-                  <div class="country-nav__itemBorder"></div>
-                </li>
-              </ul>
+            <div class="one-city__tabs">
+              <div class="one-country__tabsNav-controlsWrap one-country__tabsNav-controlsWrap--oneCity">
+                <span class="one-country__tabsNav-control one-country__tabsNav-control--slider"></span>
+                <span class="one-country__tabsNav-control one-country__tabsNav-control--list"></span>
+              </div>
+              
+              <div class="one-city__tabs-contentWrap">
+                <div class="one-country__tabsNav-content">
+                 
+                  <div class="country-nav country-nav--oneCity">
+                    <h2 class="country-nav__headline">Сортировать по:</h2>
+                    <ul class="country-nav__list">
+                      <li class="country-nav__items country-nav__items--popular">
+                        <input id="cityNavPopular" type="checkbox" name="cityNavPopular">
+                        <label for="cityNavPopular">Популярности
+                          <span></span>
+                        </label>
+                        <div class="country-nav__itemBorder"></div>
+                      </li> 
+                      <li class="country-nav__items country-nav__items--direction">
+                        <input id="cityNavNew" type="checkbox" name="cityNavNew">
+                        <label for="cityNavNew">Новые направления
+                          <span></span>
+                        </label>
+                        <div class="country-nav__itemBorder"></div>
+                      </li>
+                      <li class="country-nav__items country-nav__items--trends">
+                        <input id="cityNavTrends" type="checkbox" name="cityNavTrends">
+                        <label for="cityNavTrends">Тренды сезона
+                          <span></span>
+                        </label>
+                        <div class="country-nav__itemBorder"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div class="one-city-carts">
+             
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+
+                    <div class="slider-promotion__slide slider-promotion__slide--cart">
+                      <div class="slider-promotion__slide-titleWrap">
+                        <h2>Горнолыжная италия</h2>
+                        <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                      </div>
+                      <div class="slider-promotion__slide-img">
+                        <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapTitleDescription">
+                        <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
+                        <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
+                      </div>
+                      <div class="slider-promotion__slide-wrapText">
+                        <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
+                        <a href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    
+                    <button class="one-city-carts__button" type="button">Загрузить еще <span>10</span></button>
+
+                  </div>
+                  
+                </div>
+                
+                <div class="one-country__tabsNav-content">
+                 
+                  <div class="country-nav country-nav--oneCity">
+                    <h2 class="country-nav__headline">Сортировать по:</h2>
+                    <ul class="country-nav__list">
+                      <li class="country-nav__items country-nav__items--popular">
+                        <input id="cityNavPopularList" type="checkbox" name="cityNavPopular">
+                        <label for="cityNavPopularList">Популярности
+                          <span></span>
+                        </label>
+                        <div class="country-nav__itemBorder"></div>
+                      </li> 
+                      <li class="country-nav__items country-nav__items--direction">
+                        <input id="cityNavNewList" type="checkbox" name="cityNavNew">
+                        <label for="cityNavNewList">Новые направления
+                          <span></span>
+                        </label>
+                        <div class="country-nav__itemBorder"></div>
+                      </li>
+                      <li class="country-nav__items country-nav__items--trends">
+                        <input id="cityNavTrendsList" type="checkbox" name="cityNavTrends">
+                        <label for="cityNavTrendsList">Тренды сезона
+                          <span></span>
+                        </label>
+                        <div class="country-nav__itemBorder"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div class="countries__search countries__search--oneCity">
+                   <div class="countries__search-block">
+
+                     <ul class="countries__search-block-list">
+                       <li class="countries__search-block-items countries__search-block-items--title">Отели
+                       <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                        <span class="countries__search-block-span"></span>
+                       </li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Аликанте</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Альхесирас</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Андалусия</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Балеарские острова</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Барселона</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Бенидорм</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Беникасим</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Бильбао</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Буньоль</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Валенсия</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Город Ибица</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Гран-Канария</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Гранада</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Жирона</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ибица</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Кадис</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Португалия</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Калафель</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Канарские острова</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Каталония</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Кордова</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Коста-Бланка</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Коста-Брава</a></li>
+                     </ul>
+
+                   </div>
+                   <div class="countries__search-block">
+
+                     <ul class="countries__search-block-list">
+                       <li class="countries__search-block-items countries__search-block-items--title">Отели
+                       <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                        <span class="countries__search-block-span"></span>
+                       </li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Коста-Дорада</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Коста-дель-Соль</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Лансароте</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ллорет-де-Мар</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Мадрид</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Майорка</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Малага</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Марбелья</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Мотриль</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Нерха</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Пальма-де-Майорка</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Пеньискола</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Плайя-Бланка</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Пуэрто-дель-Кармен</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Реус</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Салоу</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Санта-Крус-де-Тенерифе</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сарагоса</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Севилья</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Ситжес</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Сьерра-Невада</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Таррагона</a></li>
+                     </ul>
+
+                   </div>
+                   <div class="countries__search-block">
+
+                     <ul class="countries__search-block-list">
+                       <li class="countries__search-block-items countries__search-block-items--title">Отели
+                       <div class="our-team__cart-worker-raiting">
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                          <span class="our-team__cart-worker-star"></span>
+                        </div>
+                        <span class="countries__search-block-span"></span>
+                       </li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Тенерифе</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Теруэль</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Толедо</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Уэска</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Фигерас</a></li>
+                       <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Чипиона</a></li>
+                     </ul>
+
+                   </div>
+                 </div>
+                  
+                </div>
+              </div>
             </div>
             
-            <div class="one-city-carts">
-             
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-              <div class="slider-promotion__slide">
-                <div class="slider-promotion__slide-titleWrap">
-                  <h2>Горнолыжная италия</h2>
-                  <span>$ 1220</span>
-                </div>
-                <div class="slider-promotion__slide-img">
-                  <img src="%=static=%img/content/slide-img1.jpg" alt="Картинка">
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription slider-promotion__slide-wrapTitleDescription--margin">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Страна</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText">Италия</p>
-                </div>
-                <div class="slider-promotion__slide-wrapTitleDescription">
-                  <h2 class="slider-promotion__slide-TitleDescriptionHeadline">Период</h2>
-                  <p class="slider-promotion__slide-TitleDescriptionText slider-promotion__slide-TitleDescriptionText--date">7.06.2017 - 17.06.2017</p>
-                </div>
-                <div class="slider-promotion__slide-wrapText">
-                  <p>Один из лучших отелей курорта расположен в 1 км от центра Мадонна ди Кампило, принадлежит старейшей семье Лоренцетти, в которой …</p>
-                  <a href="#">Подробнее</a>
-                </div>
-              </div>
-              
-            </div>
           </div>
         </div>
         
         <div class="contacts">
-          <div class="contacts__headlineBlock">
-            <div class="container">
-              <h2 class="contacts__headline">Наши контакты</h2>
-              <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
-              <div class="contacts__socialsWrap">
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
-                <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+              <div class="contacts__headlineBlock">
+                <div class="contacts__imgWrap">
+                  <picture>
+                    <source media="(max-width: 768px)" srcset="%=static=%img/content/contacts-Bg-mobile.jpg">
+                    <img src="%=static=%img/content/contacts-Bg.jpg" alt="Картинка">
+                  </picture>
+                  <div class="container">
+                    <h2 class="contacts__headline">Наши контакты</h2>
+                    <p class="contacts__titleText">Наша команда с радостью ответит на любые ваши вопросы</p>
+                    <div class="contacts__socialsWrap">
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--fb"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--inst"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--tw"></a>
+                      <a href="#" class="contacts__socialsLink contacts__socialsLink--sk"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__descriptionBlock">
+                <div class="container">
+                  <div class="contacts__formWrap">
+                    <h2 class="contacts__form-headline">Ответим на любой ваш вопрос</h2>
+                    <form id="contactsForm" class="contacts__form"  action="action.php" method="post">
+                      <ul class="contacts__form-list">
+                        <li class="contacts__form-items">
+                          <input type="text" name="contactsUserName" placeholder="Введите Ваше имя" required>
+                        </li>
+                        <li class="contacts__form-items">
+                          <input type="email" name="contactsUserMail" placeholder="Ваша электронная почта" required>
+                        </li>
+                        <li class="contacts__form-items">
+                          <textarea name="contactsUserText" placeholder="Введите сообщение" required></textarea>
+                        </li>
+                      </ul>
+                      <p class="contacts__form-notifyText">*Ваши данные не будут опубликованы или переданы третьим лицам</p>
+                      <button class="contacts__form-button" type="submit">Отправить</button>
+                    </form>
+                  </div>
+                  <div class="contacts__addressWrap">
+                    <h2 class="contacts__form-headline">Наше месторасположение</h2>
+                    <div class="contacts__address-map"></div>
+                    <h2 class="contacts__address-healineList">Контактные данные</h2>
+                    <ul class="contacts__address-list">
+                      <li class="contacts__address-items contacts__address-items--mark">Chisinau, Str. Alexandru cel Bun, 89/2</li>
+                      <li class="contacts__address-items contacts__address-items--tel">0 (22) 56 56 56; 0 (69) 45 25 12</li>
+                      <li class="contacts__address-items contacts__address-items--mail">grandvoyage@tourism.md</li>
+                      <li class="contacts__address-items contacts__address-items--watches">Пн - Пт 9:30 - 19:00, Сб 10:00 - 17:00</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="contacts__descriptionBlock">
-            <div class="container">
-              <div class="contacts__formWrap">
-                <h2 class="contacts__form-headline">Ответим на любой ваш вопрос</h2>
-                <form id="contactsForm" class="contacts__form"  action="action.php" method="post">
-                  <ul class="contacts__form-list">
-                    <li class="contacts__form-items">
-                      <input type="text" name="contactsUserName" placeholder="Введите Ваше имя" required>
-                    </li>
-                    <li class="contacts__form-items">
-                      <input type="email" name="contactsUserMail" placeholder="Ваша электронная почта" required>
-                    </li>
-                    <li class="contacts__form-items">
-                      <textarea name="contactsUserText" placeholder="Введите сообщение" required></textarea>
-                    </li>
-                  </ul>
-                  <p class="contacts__form-notifyText">*Ваши данные не будут опубликованы или переданы третьим лицам</p>
-                  <button class="contacts__form-button" type="submit">Отправить</button>
-                </form>
-              </div>
-              <div class="contacts__addressWrap">
-                <h2 class="contacts__form-headline">Наше месторасположение</h2>
-                <div class="contacts__address-map"></div>
-                <h2 class="contacts__address-healineList">Контактные данные</h2>
-                <ul class="contacts__address-list">
-                  <li class="contacts__address-items contacts__address-items--mark">Chisinau, Str. Alexandru cel Bun, 89/2</li>
-                  <li class="contacts__address-items contacts__address-items--tel">0 (22) 56 56 56; 0 (69) 45 25 12</li>
-                  <li class="contacts__address-items contacts__address-items--mail">grandvoyage@tourism.md</li>
-                  <li class="contacts__address-items contacts__address-items--watches">Пн - Пт 9:30 - 19:00, Сб 10:00 - 17:00</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <div class="best-deals">
           <div class="container">

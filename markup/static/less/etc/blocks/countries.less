@@ -1,3 +1,19 @@
+.countries__wrapheadblocks {
+  &--link1-offer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    padding-bottom: 82px;
+    .countries__headline {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 38px;
+      color: #000000;
+      text-align: left;
+    }
+  }
+}
+
 .countries__imgWrap {
   position: relative;
   img {
@@ -66,6 +82,18 @@
       }
     }
   }
+  &--oneCity {
+    margin-right: 67px;
+    padding-right: 156px;
+    .countries__search-block-items {
+      &--title {
+        display: flex;
+        .our-team__cart-worker-raiting {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
 }
 
 .countries__search-block-list {
@@ -88,7 +116,7 @@
     line-height: 20px;
     font-weight: 500;
     color: #454545;
-    span {
+    .countries__search-block-span {
       position: absolute;
       top: 0;
       right: 0;
@@ -164,6 +192,11 @@
     background-color: #fcfcfc;
     
     border: none;
+    &--oneCity {
+      position: static;
+      
+      margin-right: 0;
+    }
     &--oneCountry {
       position: static;
       
@@ -212,7 +245,7 @@
       margin-bottom: 0;
       padding-top: 17px;
       padding-bottom: 19px;
-      span {
+      .countries__search-block-span {
         display: block;
       }
     }
