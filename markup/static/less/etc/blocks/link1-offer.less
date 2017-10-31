@@ -222,3 +222,94 @@
   line-height: 16px;
   color: #454545;
 }
+
+.link1-offer__aviaDetails-listMobile {
+  .reset();
+  
+  display: none;
+  padding-left: 5.333333333333333%;
+  padding-right: 5.333333333333333%;
+  padding-bottom: 21px;
+  
+  list-style: none;
+}
+
+.link1-offer__aviaDetails-listMoblie-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &--headline {
+    margin-bottom: 0;
+    padding-top: 14px;
+    padding-bottom: 28px;
+  }
+}
+
+.link1-offer__aviaDetails-listMobile-price {
+  display: block;
+  
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #bf0112;
+}
+
+.link1-offer__aviaDetails-listMobile-dateDeparture {
+  display: block;
+  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #353535;
+}
+
+.link1-offer__aviaDetails-listMobile-hours {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #353535;
+}
+
+.link1-offer__aviaDetails-listMobile-departure {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #bf0112;
+}
+
+@media (max-width: 768px) {
+  .link1-offer__aviaDetails-list {
+    &--mobileHidden {
+      display: none;
+    }
+  }
+  
+  .link1-offer__aviaDetails-headline {
+    margin-left: 5.333333333333333%;
+    margin-bottom: 14px;
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  
+  .link1-offer__aviaDetails-item-icon {
+    &--icon4Mobile {
+      width: 99px;
+      height: 31px;
+    }
+  }
+  
+  .link1-offer__aviaDetails-listMobile {
+    display: block;
+  }
+  
+  .link1-offer__bg {
+    margin-bottom: 34px;
+  }
+}

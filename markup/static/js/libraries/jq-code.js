@@ -144,9 +144,12 @@ $(function () {
   });
   
   var width = $(window).outerWidth();
+  var tourDescriptionBlockText__link1__offer = $('.tour__descriptionBlock-text--link1-offer');
+  var tourDescriptionOrderBlock__link1__offer = $('.tour__description-orderBlock--link1-offer');
   
   if (width <= 768) {
     $('.tour__descriptionBlock').prepend($('.tour__description-orderBlock'));
+    tourDescriptionBlockText__link1__offer.after(tourDescriptionOrderBlock__link1__offer);
   } else {
     $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
   };
@@ -156,6 +159,7 @@ $(function () {
     
     if (i <= 768) {
       $('.tour__descriptionBlock').prepend($('.tour__description-orderBlock'));
+      tourDescriptionBlockText__link1__offer.after(tourDescriptionOrderBlock__link1__offer);
     } else {
       $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
     };
