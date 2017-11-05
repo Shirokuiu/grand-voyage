@@ -1,6 +1,8 @@
 .link1-offer__aviaDetails-headline {
   .reset();
   
+  margin-bottom: 29px;
+  
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -309,7 +311,45 @@
     display: block;
   }
   
+  .link1-offer__aviaDetails-listMobile-dateDeparture {
+    position: relative;
+    
+    padding-left: 27px;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      .bg-svg(@plane);
+    }
+    &--back {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .link1-offer__aviaDetails-listMobile-hours {
+    position: relative;
+    
+    padding-left: 23px;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      top: 3px;
+      left: 0;
+      
+      .bg-svg(@time);
+    }
+  }
+  
   .link1-offer__bg {
     margin-bottom: 34px;
+    &--link1-moreCities {
+      margin-bottom: 0;
+    }
   }
 }

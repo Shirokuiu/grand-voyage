@@ -988,13 +988,43 @@
   }
 }
 
+.search-avia__mobileTabs-link {
+  display: none;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #bf0112;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  background-color: #ffffff;
+  
+  border-radius: 100px;
+  border: 1px solid #ececec;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .search-avia {
     min-height: 370px;
     padding-top: 32px;
     padding-bottom: 40px;
     
-    background-image: url(%=static=%content/search-avia-mobile-bg.jpg)
+    background-image: url(%=static=%content/search-avia-mobile-bg.jpg);
+    &--hidden {
+      height: 100vh;
+      .container {
+        display: none;
+      }
+    }
   }
   
   .search-avia__headline {
@@ -1013,5 +1043,9 @@
   
   .search-avia__tabs {
     display: none;
+  }
+  
+  .search-avia__mobileTabs-link {
+    display: block;
   }
 }

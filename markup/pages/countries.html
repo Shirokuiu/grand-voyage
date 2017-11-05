@@ -6,56 +6,51 @@
   <body class="page">
     %=symbols=%
     <div class="page__wrapper">
-      <header class="page-header page-header--countries">
-       
-        <div class="page-header__rowTop">
-          <div class="container">
-            <div class="logo">
-              <a href="index.html">
-                <img src="%=static=%img/content/logo.svg" alt="Гранд Вояж">
-              </a>
+      <header class="page-header page-header--current-page">
+            <div class="page-header__rowTop">
+              <div class="container">
+                <div class="logo">
+                  <img src="%=static=%img/content/logo.svg" alt="Гранд Вояж">
+                </div>
+                <div class="page-header__search">
+                  <label for="search">Поиск</label>
+                  <input id="search" type="search" name="search" placeholder="прим. Турция, Кемер">
+                </div>
+                <div class="page-header__contacts">
+                  <a class="page-header__contacts-link page-header__contacts-link--tel" href="tel:06928799">0 (69) 287 99</a>
+                  <a class="page-header__contacts-link page-header__contacts-link--order" href="#">заказать звонок</a>
+                </div>
+                <button class="page-header__rowTop-button" type="button"></button>
+              </div>
             </div>
-            <div class="page-header__search">
-              <label for="search">Поиск</label>
-              <input id="search" type="search" name="search" placeholder="прим. Турция, Кемер">
+            <div class="page-header__rowMiddle">
+              <div class="container">
+                <nav class="main-nav">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__items"><a href="countries.html" class="main-nav__item main-nav__item--active">Страны</a></li>
+                    <li class="main-nav__items"><a href="tour.html" class="main-nav__item">Туры</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Горящие туры</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Авиабилеты</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Круизы</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Новости</a></li>
+                    <li class="main-nav__items"><a href="contacts.html" class="main-nav__item">Контакты</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Отзывы</a></li>
+                    <li class="main-nav__items main-nav__items--language">
+                      <select class="main-nav__item-language" name="mainNavItemLanguage" id="mainNavItemLanguage">
+                        <option value="1">Ru</option>
+                        <option value="2">Ro</option>
+                      </select>
+                      <span></span>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="user-block">
+                  <a href="#" class="user-block__link user-block__link--reg">Регистрация</a>
+                  <a href="#" class="user-block__link user-block__link--enter">Вход</a>
+                </div>
+              </div>
             </div>
-            <div class="page-header__contacts">
-              <a class="page-header__contacts-link page-header__contacts-link--tel" href="tel:06928799">0 (69) 287 99</a>
-              <a class="page-header__contacts-link page-header__contacts-link--order" href="#">заказать звонок</a>
-            </div>
-            <button class="page-header__rowTop-button" type="button"></button>
-          </div>
-        </div>
-        
-        <div class="page-header__rowMiddle">
-          <div class="container">
-            <nav class="main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--active">Страны</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Туры</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Горящие туры</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Авиабилеты</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Круизы</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Новости</a></li>
-                <li class="main-nav__items"><a href="contacts.html" class="main-nav__item">Контакты</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Отзывы</a></li>
-                <li class="main-nav__items main-nav__items--language">
-                  <select class="main-nav__item-language" name="mainNavItemLanguage" id="mainNavItemLanguage">
-                    <option value="1">Ru</option>
-                    <option value="2">Ro</option>
-                  </select>
-                  <span></span>
-                </li>
-              </ul>
-            </nav>
-            <div class="user-block">
-              <a href="#" class="user-block__link user-block__link--reg">Регистрация</a>
-              <a href="#" class="user-block__link user-block__link--enter">Вход</a>
-            </div>
-          </div>
-        </div>
-        
-      </header>
+          </header>
       <main class="page-content">
        
        <div class="countries">
@@ -70,13 +65,16 @@
            </div>
          </div>
          <div class="countries__searchWrap">
-           <div class="container">
+           <div class="container container--mobilePadding">
              <div class="countries__search">
                <div class="countries__search-block">
                 
                  <ul class="countries__search-block-list">
                    <li class="countries__search-block-items countries__search-block-items--title">Европа
                      <span class="countries__search-block-span"></span>
+                   </li>
+                   <li class="countries__search-block-input">
+                     <input type="text" name="search-list-country" placeholder="Поиск">
                    </li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Австрия</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Андорра</a></li>
@@ -108,6 +106,9 @@
                    <li class="countries__search-block-items countries__search-block-items--title">Азия, Ближний и Средний Восток
                      <span class="countries__search-block-span"></span>
                    </li>
+                   <li class="countries__search-block-input">
+                     <input type="text" name="search-list-country" placeholder="Поиск">
+                   </li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Азербайджан</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Армения</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Бахрейн</a></li>
@@ -134,9 +135,12 @@
                </div>
                <div class="countries__search-block">
                 
-                 <ul class="countries__search-block-list">
+                 <ul class="countries__search-block-list countries__search-block-items--closeWide">
                    <li class="countries__search-block-items countries__search-block-items--title">Америка и страны Карибского бассейна
                      <span class="countries__search-block-span"></span>
+                   </li>
+                   <li class="countries__search-block-input">
+                     <input type="text" name="search-list-country" placeholder="Поиск">
                    </li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ангилья</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Антигуа и Барбуда</a></li>
@@ -168,6 +172,9 @@
                    <li class="countries__search-block-items countries__search-block-items--title">Австралия и Океания
                      <span class="countries__search-block-span"></span>
                    </li>
+                   <li class="countries__search-block-input">
+                     <input type="text" name="search-list-country" placeholder="Поиск">
+                   </li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Австралия</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item countries__search-block-item--colorRed">Вануату</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Кука острова</a></li>
@@ -183,6 +190,9 @@
                  <ul class="countries__search-block-list">
                    <li class="countries__search-block-items countries__search-block-items--title">Африка и Индийский океан
                      <span class="countries__search-block-span"></span>
+                   </li>
+                   <li class="countries__search-block-input">
+                     <input type="text" name="search-list-country" placeholder="Поиск">
                    </li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Ботсвана</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Замбия</a></li>
@@ -201,6 +211,9 @@
                  <ul class="countries__search-block-list countries__search-block-list--marginBottom">
                    <li class="countries__search-block-items countries__search-block-items--title">Безвизовые страны
                      <span class="countries__search-block-span"></span>
+                   </li>
+                   <li class="countries__search-block-input">
+                     <input type="text" name="search-list-country" placeholder="Поиск">
                    </li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Азербайджан</a></li>
                    <li class="countries__search-block-items"><a href="#" class="countries__search-block-item">Антигуа и Барбуда</a></li>
@@ -349,34 +362,28 @@
         
       </main>
       <footer class="page-footer">
-        
-        <div class="page-footer__rowTop">
-          <div class="container">
-            <div class="logo logo--footer">
-              <img src="%=static=%img/content/logo-footer.svg" alt="Гранд Вояж">
+           
+            <div class="page-footer__rowTop">
+              <div class="container">
+                <div class="logo logo--footer">
+                  <img src="%=static=%img/content/logo-footer.svg" alt="Гранд Вояж">
+                </div>
+                <nav class="main-nav main-nav--footer">
+                  <ul class="main-nav__list main-nav__list--footer">
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Туры</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--active">Страны</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Горящие туры</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Круизы</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Авиабилеты</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Отзывы</a></li>
+                    <li class="main-nav__items"><a href="#" class="main-nav__item">Новости</a></li>
+                    <li class="main-nav__items"><a href="contacts.html" class="main-nav__item">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <nav class="main-nav main-nav--footer">
-              <ul class="main-nav__list main-nav__list--footer">
-                <li class="main-nav__items"><a class="main-nav__item main-nav__item--active">Страны</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Туры</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Горящие туры</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Авиабилеты</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Круизы</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Новости</a></li>
-                <li class="main-nav__items"><a href="contacts.html" class="main-nav__item">Контакты</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item">Отзывы</a></li>
-                <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--language-ru">
-                  Ru</a>
-                  <span></span>
-                  <a href="#" class="main-nav__item main-nav__item--language-ro">
-                  Ro</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div class="page-footer__rowMiddle">
+            
+            <div class="page-footer__rowMiddle">
               <div class="container">
                 <div class="page-footer__rowMiddle-blocksWrap">
                   <div class="page-footer__latestNews">
@@ -448,14 +455,14 @@
                 </div>
               </div>
             </div>
-
-        <div class="page-footer__rowBottom">
-          <div class="container">
-            <p class="page-footer__rowBottom-copyright">Toate drepturile rezervate © grandvoyage.md 2012</p>
-          </div>
-        </div>
-        
-      </footer>
+            
+            <div class="page-footer__rowBottom">
+              <div class="container">
+                <p class="page-footer__rowBottom-copyright">Toate drepturile rezervate © grandvoyage.md 2012</p>
+              </div>
+            </div>
+            
+          </footer>
     </div>
 
     <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>

@@ -84,6 +84,30 @@
       }
     }
   }
+  &--link1-moreCities {
+    margin-bottom: 0;
+    .owl-nav {
+      top: 27%;
+    }
+    .owl-dots {
+      .owl-dot {
+        span {
+          width: 95px;
+          height: 95px;
+        }
+        &:nth-child(1) {
+          span {
+           background-image: url(%=static=%content/link1-more-cities-img-active.jpg); 
+          }
+        }
+      }
+    }   
+  }
+  &--link1-moreCities-hotels {
+    .owl-dots {
+      display: none;
+    }
+  }
 }
 
 .tour__galery-imgWrap {
@@ -192,6 +216,12 @@
 .tour__descriptionBlock {
   width: 670px;
   margin-bottom: 60px;
+  &--link1-moreCities {
+    margin-bottom: 0;
+    .tour__descriptionBlock-descriptionTour-dayWrap {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .tour__descriptionBlock-headline {
@@ -214,6 +244,12 @@
   font-weight: 300;
   line-height: 24px;
   color: #454545;
+  &--link1-moreCities {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #454545;
+  }
 }
 
 .tour__descriptionBlock-otherHotels {
@@ -240,6 +276,18 @@
   
   border: 1px solid #FAFAFA;
   border-radius: 5px;
+  &--mobile {
+    display: none;
+    margin-top: 10px;
+    .tour__descriptionBlock-otherHotels-items {
+      flex-direction: row-reverse;
+    }
+    .tour__descriptionBlock-otherHotels-item {
+      &--time {
+        margin-right: auto;
+      }
+    }
+  }
 }
 
 .tour__descriptionBlock-otherHotels-items {
@@ -266,6 +314,16 @@
   font-weight: 700;
   line-height: 16px;
   color: #454545;
+  &--positionFix {
+    position: relative;
+    left: -4px;
+  }
+  &--center {
+    left: 20px;
+  }
+  &--mobileHidden {
+    display: none !important;
+  }
   &--headline {
     font-size: 16px;
     font-weight: 500;
@@ -279,7 +337,8 @@
     color: #bf0112;
   }
   &--hotel-icon,
-  &--price {
+  &--price,
+  &--time {
     position: relative;
     
     display: block;
@@ -288,7 +347,7 @@
       content: '';
       
       position: absolute;
-      top: -8px;
+      top: -4px;
       left: 0;
     }
   }
@@ -299,7 +358,14 @@
   }
   &--price {
     &::before {
-      .bg-svg(@hotel-price);
+      .bg-svg(@food);
+    }
+  }
+  &--time {
+    &::before {
+      top: 1px;
+      
+      .bg-svg(@time);
     }
   }
 }
@@ -529,6 +595,10 @@
     .owl-dots {
       display: none;
     }
+    .owl-prev,
+    .owl-next {
+      border-radius: 6px;
+    }
   }
   
   .tour__galery-img-descriptionBlocksWrap {
@@ -626,6 +696,17 @@
     padding-right: 5.333333333333333%;
   }
   
+  .tour__descriptionBlock-otherHotels-list {
+    &--mobile {
+      display: block;
+      .tour__descriptionBlock-otherHotels-item {
+        &--time {
+          padding-left: 23px;
+        }
+      }
+    }
+  }
+  
   .tour__descriptionBlock-otherHotels-items {
     padding-left: 5.333333333333333%;
     padding-right: 5.333333333333333%;
@@ -644,6 +725,9 @@
     &--hotel-icon,
     &--price{
       padding-left: 36px;
+    }
+    &--center {
+      left: 0;
     }
   }
   

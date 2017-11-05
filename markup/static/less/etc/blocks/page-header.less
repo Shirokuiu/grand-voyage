@@ -150,6 +150,40 @@
 @media (max-width: 768px) {
   .page-header {
     position: relative;
+    &--current-page {
+      z-index: 10;
+      .page-header__rowTop {
+        position: relative;
+        z-index: 20;
+      }
+      .page-header__rowMiddle {
+        &--open {
+          background-color: #ffffff;
+          .main-nav__item {
+            color: #454545;
+            &--active {
+              color: #af0010;
+            }
+          }
+          .user-block__link {
+            color: #454545;
+          }
+          .main-nav__items {
+            &--language {
+              select {
+                color: #454545;
+              }
+              span {
+                &::before,
+                &::after {
+                  background-color: #454545;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     &--contacts {
       margin-bottom: 30px;
     }
@@ -180,9 +214,9 @@
   }
   
   .page-header__contacts {
-    position: absolute;
+    position: fixed;
     bottom: 27px;
-    right: 2.473958333333333%;
+    right: 5.333333333333333%;
     
     width: auto;
   }
@@ -193,6 +227,13 @@
     }
     &--telVissible {
       display: block;
+      
+      font-size: 0;
+      
+      .bg-svg(@tel-mobile);
+      &::before {
+        display: none;
+      }
     }
     &--order {
       display: none;
@@ -239,9 +280,14 @@
   }
   
   .page-header__rowMiddle {
-      display: none;
+    display: none;
     &--open {
+      position: absolute;
+      left: 0;
+      right: 0;
+  
       display: block;
+      height: 100vh;
       .container {
         position: relative;
         

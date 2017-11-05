@@ -12,6 +12,9 @@
       text-align: left;
     }
   }
+  &--link1-moreCities {
+    padding-top: 0;
+  }
 }
 
 .countries__imgWrap {
@@ -41,6 +44,18 @@
   line-height: 55px;
   color: #ffffff;
   text-align: center;
+  &--link1-offerMoreCities {
+    color: #000000;
+  }
+}
+
+.countries__subtitle {
+  &--link1-offerMoreCities {
+    font-size: 18px;
+    font-weight: 300;
+    color: #454545;
+    text-align: center;
+  }
 }
 
 .countries__title {
@@ -142,6 +157,68 @@
   }
 }
 
+.countries__search-block-input {
+  display: none;
+  margin-bottom: 20px;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 27px;
+    padding-bottom: 20px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+
+    background-image: url(%=static=%content/header-search.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 1px 20px;
+
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: #b5b5b5;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+
+      opacity: 1;
+    }
+    &:-moz-input-placeholder {
+      color: #b5b5b5;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: #b5b5b5;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #b5b5b5;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      font-family: 'Roboto', sans-serif;
+
+      opacity: 1;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .countries__wrapheadblocks {
     &--link1-offer {
@@ -164,11 +241,25 @@
         text-align: center;
       }
     }
+    &--link1-moreCities {
+      padding-bottom: 0;
+    }
   }
   
   .countries__titleWrap {
     &--link1-offer {
       order: 1;
+    }
+    &--link1-moreCities {
+      order: 1;
+      padding-left: 5.333333333333333%;
+      padding-right: 5.333333333333333%;
+      padding-top: 34px;
+      padding-bottom: 35px;
+      
+      background-color: #fcfcfc;
+      
+      border-top: 1px solid #ececec;
     }
   }
   
@@ -197,6 +288,10 @@
       color: #000000;
       text-align: left;
     }
+    &--link1-offerMoreCities {
+      font-size: 20px;
+      text-align: left;
+    }
   }
   
   .countries__subtitle {
@@ -204,6 +299,9 @@
     font-weight: 300;
     line-height: 18px;
     color: #454545;
+    &--link1-offerMoreCities {
+      text-align: left;
+    }
   }
   
   .countries__title {
@@ -213,7 +311,6 @@
   }
   
   .countries__searchWrap {
-    min-height: 452px;
     padding-top: 40px;
     padding-bottom: 40px;
     .container {
@@ -222,9 +319,6 @@
   }
   
   .countries__search {
-    position: absolute;
-    left: 0;
-    right: 0;
     
     flex-direction: column;
     padding-top: 0;
@@ -246,6 +340,9 @@
       margin-right: 0;
       .countries__search-block {
         margin-top: 0;
+        &--mobileHidden {
+          display: none;
+        }
       }
       .countries__search-block-list {
         border: none;
@@ -261,8 +358,21 @@
         &--title {
           display: block;
         }
+        &--mobileHidden {
+          display: none;
+        }
       }
     } 
+  }
+  
+  .countries__search-block {
+    &:last-child {
+      .countries__search-block-list {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   
   .countries__search-block-list {
@@ -282,15 +392,37 @@
   }
   
   .countries__search-block-items {
-    display: none;
     &--title {
-      display: block;
       margin-bottom: 0;
-      padding-top: 17px;
-      padding-bottom: 19px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       .countries__search-block-span {
         display: block;
       }
     }
+    &--close {
+      overflow: hidden;
+      height: 50px;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+    &--closeWide {
+      height: 68px;
+    }
+    &--open {
+      overflow: auto;
+      height: auto;
+      .countries__search-block-items {
+        .countries__search-block-span {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  
+  .countries__search-block-input {
+    display: block;
   }
 }

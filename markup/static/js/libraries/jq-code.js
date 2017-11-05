@@ -38,11 +38,20 @@ $(function () {
     }
   });
   
+  $('.one-country__tabs-controlsWrap').slick({
+    arrows: false,
+    infinite: false,
+    slidesToShow: 1.5,
+    focusOnSelect: true,
+    variableWidth: true
+  });
+  
   $('.page-header__rowTop-button').click(function () {
     $(this).toggleClass('page-header__rowTop-button--open');
     
     $('.page-header__contacts-link--tel').toggleClass('page-header__contacts-link--telVissible');
     $('.page-header__rowMiddle').toggleClass('page-header__rowMiddle--open');
+    $('.search-avia').toggleClass('search-avia--hidden');
   });
   
   $(".search-avia__tabs-content").not(":first").hide();
@@ -150,8 +159,28 @@ $(function () {
   if (width <= 768) {
     $('.tour__descriptionBlock').prepend($('.tour__description-orderBlock'));
     tourDescriptionBlockText__link1__offer.after(tourDescriptionOrderBlock__link1__offer);
+    
+    $('.one-country__tabs-controlsWrap').slick({
+      arrows: false,
+      infinite: false,
+      slidesToShow: 1.5,
+      focusOnSelect: true,
+      variableWidth: true
+    });
+    
+    //$('.countries__search-block-items--title').parent().parent().addClass('countries__search-block-items--close');
+    $('.countries__search-block-items--title').parent().addClass('countries__search-block-items--close');
+    
+    $('.countries__search-block-items--title').on('click', function () {
+      if ($(this).parent().hasClass('countries__search-block-items--close')) {
+        $(this).parent().removeClass('countries__search-block-items--close').addClass('countries__search-block-items--open');
+      } else {
+        $(this).parent().removeClass('countries__search-block-items--open').addClass('countries__search-block-items--close');
+      }
+    });
   } else {
     $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
+    $('.one-country__tabs-controlsWrap').slick('destroy');
   };
   
   $(window).resize(function () {
@@ -160,8 +189,25 @@ $(function () {
     if (i <= 768) {
       $('.tour__descriptionBlock').prepend($('.tour__description-orderBlock'));
       tourDescriptionBlockText__link1__offer.after(tourDescriptionOrderBlock__link1__offer);
+      
+      $('.one-country__tabs-controlsWrap').slick({
+        arrows: false,
+        infinite: false,
+        slidesToShow: 1.5,
+        focusOnSelect: true,
+        variableWidth: true
+      });
+      
+      $('.countries__search-block-items--title').on('click', function () {
+        if ($('.countries__search-block-list').hasClass('countries__search-block-list--close')) {
+          $(this).parents().find('.countries__search-block-list').removeClass('countries__search-block-list--close');
+        } else {
+         $(this).parents().find('.countries__search-block-list').addClass('countries__search-block-list--close');
+        }
+      });
     } else {
       $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
+      $('.one-country__tabs-controlsWrap').slick('destroy');
     };
   });
   
