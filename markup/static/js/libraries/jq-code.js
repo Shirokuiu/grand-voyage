@@ -178,9 +178,32 @@ $(function () {
         $(this).parent().removeClass('countries__search-block-items--open').addClass('countries__search-block-items--close');
       }
     });
+    
+    $('.page-header__search label').on('click', function () {
+      $(this).addClass('hidden');
+      $('.page-header__search').addClass('page-header__search--open');
+      $('.page-header__search input').addClass('vissible');
+      $('.logo').addClass('logo--hidden');
+      $('.page-header__search-exit').addClass('page-header__search-exit--open');
+    });
+
+    $('.page-header__search input').on('keypress', function () {
+      $(this).addClass('focus');
+    });
+
+    $('.page-header__search-exit').on('click', function () {
+      $(this).removeClass('page-header__search-exit--open');
+      $('.page-header__search label').removeClass('hidden');
+      $('.page-header__search').removeClass('page-header__search--open');
+      $('.page-header__search input').removeClass('vissible');
+      $('.logo').removeClass('logo--hidden');
+    });
   } else {
     $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
     $('.one-country__tabs-controlsWrap').slick('destroy');
+    $('.page-header__search label').unbind('click');
+    $('.page-header__search input').unbind('keypress');
+    $('.page-header__search-exit').unbind('click');
   };
   
   $(window).resize(function () {
@@ -205,9 +228,32 @@ $(function () {
          $(this).parents().find('.countries__search-block-list').addClass('countries__search-block-list--close');
         }
       });
+      
+      $('.page-header__search label').on('click', function () {
+        $(this).addClass('hidden');
+        $('.page-header__search').addClass('page-header__search--open');
+        $('.page-header__search input').addClass('vissible');
+        $('.logo').addClass('logo--hidden');
+        $('.page-header__search-exit').addClass('page-header__search-exit--open');
+      });
+
+      $('.page-header__search input').on('keypress', function () {
+        $(this).addClass('focus');
+      });
+
+      $('.page-header__search-exit').on('click', function () {
+        $(this).removeClass('page-header__search-exit--open');
+        $('.page-header__search label').removeClass('hidden');
+        $('.page-header__search').removeClass('page-header__search--open');
+        $('.page-header__search input').removeClass('vissible');
+        $('.logo').removeClass('logo--hidden');
+      });
     } else {
       $('.tour__descriptionWrap').append($('.tour__description-orderBlock'));
       $('.one-country__tabs-controlsWrap').slick('destroy');
+      $('.page-header__search label').unbind('click');
+      $('.page-header__search input').unbind('keypress');
+      $('.page-header__search-exit').unbind('click');
     };
   });
   
