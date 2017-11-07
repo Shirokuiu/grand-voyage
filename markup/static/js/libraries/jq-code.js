@@ -9,10 +9,12 @@ $(function () {
     smartSpeed: 1000,
     responsive:{
         0:{
-            items:1.1
+            items:1.2,
+            margin:0
         },
         768:{
-            items:1.1
+            items:1.2,
+            margin:0
         },
         1000:{
             items:3

@@ -1,5 +1,5 @@
 .best-deals {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   padding-top: 87px;
   
   background-color: #FCFCFC;
@@ -8,7 +8,7 @@
 .best-deals__blocksWrap {
   display: flex;
   justify-content: space-between;
-  padding-right: 6.48%;
+  //padding-right: 6.48%;
 }
 
 .best-deals__blockLeft {
@@ -20,6 +20,7 @@
 
 .best-deals__block-link {
   display: block;
+  height: 100%;
   &--height {
     height: 526px;
     img {
@@ -28,6 +29,7 @@
   }
   img {
     display: block;
+    height: 100%;
   }
 }
 
@@ -40,12 +42,19 @@
 .best-deals__blockRight-row {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .best-deals__blockRight {
   position: relative;
+  
+  flex-grow: 1;
+  height: 248px;
   &--wide {
     margin-top: auto;
+  }
+  &--margin {
+    margin-right: 30px;
   }
 }
 
@@ -87,6 +96,7 @@
   .best-deals {
     margin-bottom: 40px;
     padding-top: 30px;
+    padding-bottom: 0;
   }
   
   .best-deals__blocksWrap {
@@ -109,12 +119,18 @@
   
   .best-deals__blockRight-row {
     flex-direction: column;
+    margin-bottom: 40px;
   }
   
   .best-deals__blockRight {
-    margin-bottom: 40px;
+    height: auto;
+    margin-bottom: 0;
     &--wide {
       margin-bottom: 0;
+    }
+    &--margin {
+      margin-right: 0;
+      margin-bottom: 40px;
     }
   }
 }

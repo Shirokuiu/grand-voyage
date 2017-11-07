@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 67px;
+  //margin-right: 67px;
 }
 
 .one-city-carts__button {
   .reset();
   
+  display: none;
   width: 89.33333333333333%;
   margin: 0 auto;
   padding-top: 20px;
@@ -30,5 +31,17 @@
 @media (max-width: 768px) {
   .one-city-carts {
     margin-right: 0;
+    .slider-promotion__slide {
+      margin-left: 0;
+    }
+    .slider-promotion__slide {
+      &--cart {
+        width: auto;
+      }
+    }
+  }
+  
+  .one-city-carts__button {
+    display: block;
   }
 }
